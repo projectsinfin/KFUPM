@@ -9,12 +9,11 @@
     <meta name="author" content="" />
     <title>KFUPM</title>
     <link rel="icon" type="image/x-icon" href="{% static 'favicon.png' %}" />
-    <link rel=" stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
-    <script src="{% static 'js/scripts.js' %}"></script>
 </head>
 
 <body id="page-top">
@@ -23,31 +22,34 @@
         <a class="menu-toggle rounded" href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
         <nav id="sidebar-wrapper">
             <ul class="sidebar-nav">
-                <li class="sidebar-nav-item"><a class="collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                        KFUPM Fund
-                      </a>
+                <li class="sidebar-nav-item">
+                    <a class="collapsed opentab" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        <span>KFUPM Fund<img class="aa" src="{% static 'ccl.png' %}"> <img class="bb" src="{% static 'bbc.png' %}"></span>
+                    </a>
                     <ul id="flush-collapseOne" class="collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                         <li class="accordion-body"> <a href="{% url 'intro'%}"> Introduction</a></li>
                         <li class="accordion-body"> <a href="{% url 'vision'%}"> Vision & Mission</a></li>
-                        <li class="accordion-body"> <a href="{% url 'kfupm-funds'%}"> KFUPM Fund in Numbers</a></li>
-                        <li class="accordion-body"> <a href="{% url 'commitments'%}"> Our Commitment</a></li>
+                        <li class="accordion-body"> <a href="{% url 'kfupm-funds'%}">  KFUPM Fund in Numbers</a></li>
+                        <li class="accordion-body"> <a href="{% url 'commitments'%}">   Our Commitment</a></li>
                     </ul>
                 </li>
-                <li class="sidebar-nav-item"><a class="collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOnet" aria-expanded="false" aria-controls="flush-collapseOnet">
-    Distinguished Programs
-</a>
+                <li class="sidebar-nav-item">
+                    <a class="collapsed opentab" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOnet" aria-expanded="false" aria-controls="flush-collapseOnet">
+                        <span>Distinguished Programs<img class="aa" src="{% static 'ccl.png' %}"> <img class="bb" src="{% static 'bbc.png' %}"></span>
+                    </a>
                     <ul id="flush-collapseOnet" class="collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                         <li class="accordion-body"> <a href="{% url 'educational'%}"> Educational</a></li>
                         <li class="accordion-body"> <a href="{% url 'research'%}"> Research & Innovation</a></li>
-                        <li class="accordion-body"> <a href="{% url 'community'%}"> Campus Community</a></li>
+                        <li class="accordion-body"> <a href="{% url 'community'%}">  Campus Community</a></li>
                     </ul>
                 </li>
                 <li class="sidebar-nav-item"><a href="{% url 'patners'%}">Our Partners</a></li>
-                <li class="sidebar-nav-item"><a class="collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOnetn" aria-expanded="false" aria-controls="flush-collapseOnetn">
-                        How can i contribute</a>
+                <li class="sidebar-nav-item">
+                    <a class="collapsed opentab" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOnetn" aria-expanded="false" aria-controls="flush-collapseOnetn">
+                        <span>How Can I Contribute<img class="aa" src="{% static 'ccl.png' %}"> <img class="bb" src="{% static 'bbc.png' %}"></span> </a>
                     <ul id="flush-collapseOnetn" class="collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                        <li class="accordion-body"> <a href="{% url 'online-contribution'%}">Online Contribution</a></li>
-                        <li class="accordion-body"> <a href="{% url 'contribution-form'%}">Contribution Form</a></li>
+                        <li class="accordion-body"> <a href="{% url 'online-contribution'%}">Online contribution</a></li>
+                        <li class="accordion-body"> <a href="{% url 'contribution-form'%}">contribution Form</a></li>
                         <li class="accordion-body"> <a href="{% url 'FAQS'%}">FAQs</a></li>
                     </ul>
                 </li>
@@ -55,7 +57,7 @@
             </ul>
         </nav>
         <div class="logo">
-            <img src="{% static 'logo.png' %}">
+            <a href="{% url 'index'%}"><img src="{% static 'logo.png' %}"></a>
         </div>
     </div>
     <!-- Header-->
@@ -67,12 +69,13 @@
         <div class="container">
             <div class="row marg-b">
                 <div class="col-md-6 batboo">
-                    <h1 data-aos="fade-right" class="mb-3">About KFUPM</h1>
-                    <p data-aos="fade-right">King Fahd University of Petroleum & Minerals (KFUPM) is one of the leading educational organizations. It aims at being a preeminent institution known for its globally competitive graduates, cutting edge research, and leadership in
-                        energy discoveries.<br><br> KFUPM is committed to make a substantial impact in what it does. Today, KFUPM offers 83 programs to more than 10,000 students studying in its. 8 Academic Colleges</p>
+                    <h1 data-aos="fade-right" class="mb-3">{{title_1}}</h1>
+                    <p data-aos="fade-right">
+                        {% for i in title_1_text %} {{i}} {% if not forloop.last %} <br><br>{% endif %} {% endfor %}
+                    </p>
                 </div>
                 <div class="col-md-6">
-                    <img data-aos="fade-left" class="img-fluid" src=" {% static 'about.png' %}">
+                    <img data-aos="fade-left" class="img-fluid" src="{% static 'about.png' %}">
                 </div>
             </div>
             <div class="row">
@@ -80,9 +83,8 @@
                     <img data-aos="fade-right" class="img-fluid" src="{% static 'about2.png' %}">
                 </div>
                 <div class="col-md-6 batboor">
-                    <h1 data-aos="fade-left" class="mb-3">KFUPM Fund</h1>
-                    <p data-aos="fade-left">The aim of the KFUPM fund is to provide an impact driven investment opportunity through a leading educational & research funding in the Kingdom. With its large alumni network and network of charitable institutions the fund preserves
-                        the true essence of truth and provides a sustainable distribution for our Contributors. </p>
+                    <h1 data-aos="fade-left" class="mb-3">{{title_2}}</h1>
+                    <p data-aos="fade-left">{% for i in title_2_text %} {{i}} {% if not forloop.last %} <br><br>{% endif %} {% endfor %} </p>
                 </div>
             </div>
         </div>
@@ -96,7 +98,7 @@
     <section class="content-section bg-primary text-white" id="numbers">
         <div class="container px-4 px-lg-5">
             <div class="content-section-heading">
-                <h2 data-aos="fade-up" class="mb-5">KFUPM Fund in Numbers</h2>
+                <h2 data-aos="fade-up" class="mb-5">{{title_3}}</h2>
             </div>
             <div class="row">
                 <div class="row gx-4 gx-lg-5">
@@ -174,28 +176,27 @@
     <section class="callout">
         <div class="container text-left partners">
             <h2 data-aos="zoom-in" class="">
-                Our Partners
+                {{title_4}}
             </h2>
-            <p data-aos="zoom-in">At KFUPM, we value your contribution and dedication to make an impact by supporting the KFUPM fund and advancing it’s mission and purpose in offering leading educational and research missions in order to position the current and future beneficiaries
-                to a path of excellence. [Include link to sponsors list]</p>
-            <div class="col-md-12">
-                <ul>
-                    <li><img src="{% static '01.png' %}"></li>
-                    <li><img src="{% static '02.png' %}"></li>
-                    <li><img src="{% static '03.png' %}"></li>
-                    <li><img src="{% static '04.png' %}"></li>
-                    <li><img src="{% static '05.png' %}"></li>
-                    <li><img src="{% static '06.png' %}"></li>
-                </ul>
-            </div>
+            <p data-aos="zoom-in">{% for i in title_4_text %} {{i}} {% if not forloop.last %} <br><br>{% endif %} {% endfor %}
+                <p>
+                    <div class="col-md-12">
+                        <ul>
+                            <li><img src="{% static '01.png' %}"></li>
+                            <li><img src="{% static '02.png' %}"></li>
+                            <li><img src="{% static '03.png' %}"></li>
+                            <li><img src="{% static '04.png' %}"></li>
+                            <li><img src="{% static '05.png' %}"></li>
+                            <li><img src="{% static '06.png' %}"></li>
+                        </ul>
+                    </div>
         </div>
     </section>
     <!-- Call to Action-->
     <section class="commitmenttext-white">
         <div class="container text-left">
-            <h2 data-aos="zoom-in" class="mb-4">Our commitment</h2>
-            <p data-aos="zoom-in">At KFUPM Fund, we believe that charitable funds deserve the highest form of investment management due to the nature of the contributors. Equipped by versatile management team visionary leadership, you can be rest assured that your contributions
-                always adhere to our ethos</p>
+            <h2 data-aos="zoom-in" class="mb-4">{{title_5}}</h2>
+            <p data-aos="zoom-in">{% for i in title_5_text %} {{i}} {% if not forloop.last %} <br><br>{% endif %} {% endfor %}</p>
         </div>
     </section>
 
@@ -207,16 +208,16 @@
                     <h3>Contact Us</h3>
                     <ul class="list-inline mb-5">
                         <li class="list-inline-item">
-                            <a class="social-link rounded-circle text-white" href="#!"><i class="fa fa-facebook"></i></a>
+                            <a class="social-link rounded-circle text-white fb" href="#!"><i class="fa fa-facebook"></i></a>
                         </li>
                         <li class="list-inline-item">
-                            <a class="social-link rounded-circle text-white" href="#!"><i class="fa fa-twitter"></i></a>
+                            <a class="social-link rounded-circle text-white tw" href="#!"><i class="fa fa-twitter"></i></a>
                         </li>
                         <li class="list-inline-item">
-                            <a class="social-link rounded-circle text-white" href="#!"><i class="fa fa-linkedin"></i></a>
+                            <a class="social-link rounded-circle text-white li" href="#!"><i class="fa fa-linkedin"></i></a>
                         </li>
                         <li class="list-inline-item">
-                            <a class="social-link rounded-circle text-white" href="#!"><i class="fa fa-youtube"></i></a>
+                            <a class="social-link rounded-circle text-white yu" href="#!"><i class="fa fa-youtube"></i></a>
                         </li>
                     </ul>
                 </div>
@@ -224,13 +225,13 @@
 
                     <div class="newsll">
                         <label>Join Our Newsletter</label>
-                        <input type="text" value="" placeholder="Email address">
+                        <input type="text" name="newsletter" id="newsletter" value="" placeholder="Email address">
                     </div>
                 </div>
                 <div class="col-md-4 navlinksss">
                     <ul class="list-inline mb-5">
                         <li class="list-inline-item">
-                            <a class="" href="#!">Contributor Form</a>
+                            <a class="" href="contribution_form.html">Contributor Form</a>
                         </li>
                         <li class="list-inline-item">
                             <a class="" href="#!">Download Brochure</a>
@@ -258,7 +259,7 @@
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <!-- <script src="{% static 'js/scripts.js' %}"></script> -->
+    <script src="{% static 'js/scripts.js' %}"></script>
     <script>
         AOS.init();
     </script>

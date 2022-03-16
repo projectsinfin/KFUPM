@@ -11683,7 +11683,7 @@ ul.sidebar-nav .accordion-body a:hover {
     -webkit-text-fill-color: transparent;
 }
 
-.sidebar-nav li a:hover {
+.sidebar-nav li a:hover span {
     text-decoration: none;
     background: -webkit-linear-gradient(#007e4b, #007fe3);
     -webkit-background-clip: text;
@@ -11731,67 +11731,68 @@ span.infohr {
 
 header.innerpag.stp.campuscomunty {
     background: url("../campus_community.png");
-    background-size: contain;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
 }
 
 header.innerpag.stp.undprogram {
     background: url("../undprogram.png");
-    background-size: contain;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
 }
 
 header.innerpag.stp.gp {
     background: url("../gp.png");
-    background-size: contain;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
 }
 
 header.innerpag.stp.fp {
     background: url("../fp.png");
-    background-size: contain;
+    background-size: 100% 100%;
+    ;
     background-repeat: no-repeat;
 }
 
 header.innerpag.stp.vm {
     background: url("../vm.png");
-    background-size: contain;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
 }
 
 header.innerpag.stp.oc {
     background: url("../oc.png");
-    background-size: contain;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
 }
 
 header.innerpag.stp.ed {
     background: url("../ed.png");
-    background-size: contain;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
 }
 
 header.innerpag.stp.cn {
     background: url("../cn.png");
-    background-size: contain;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
 }
 
 header.innerpag.stp.occ {
     background: url("../occ.png");
-    background-size: contain;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
 }
 
 header.innerpag.stp.kfn {
     background: url("../kfn.png");
-    background-size: contain;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
 }
 
 header.innerpag.stp.faq {
     background: url("../faq.png");
-    background-size: contain;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
 }
 
@@ -11802,6 +11803,29 @@ header.innerpag.stp.faq {
     height: 800px;
     background-size: contain;
     display: flex;
+}
+
+button.btn.btn-link.btn-block.text-left {
+    background: url("../open.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 15px;
+}
+
+button.btn.btn-link.btn-block.text-left.collapsed {
+    background: url("../close.png");
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.opentab span img {
+    margin-left: 9px;
+    width: 15px;
+}
+
+.opentab span .bb {
+    margin-left: 9px !important;
+    width: 9px;
 }
 
 .empaty_space {
@@ -11838,6 +11862,33 @@ header.innerpag.stp.faq {
     text-align: center;
     background-size: contain;
     margin-top: -100px;
+}
+
+.sidebar-nav li .opentab span {
+    text-decoration: none;
+    background: -webkit-linear-gradient(#007e4b, #007fe3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+a.collapsed.opentab span {
+    -webkit-background-clip: inherit;
+    background: transparent;
+    color: #000;
+    -webkit-text-fill-color: black;
+}
+
+a.opentab .bb {
+    display: none;
+}
+
+a.opentab.collapsed .aa {
+    display: none;
+}
+
+a.collapsed.opentab .bb {
+    display: inherit;
+    margin: 0;
 }
 
 .edutext span {
@@ -12100,7 +12151,112 @@ hr.wdths {
     border: 0;
 }
 
-@media screen and (max-width: 768px) {
+footer.footer .social-link.fb:hover {
+    background-color: #4267B2;
+    border-color: #4267B2;
+}
+
+footer.footer .social-link.tw:hover {
+    background-color: #00acee;
+    border-color: #00acee;
+}
+
+footer.footer .social-link.li:hover {
+    background-color: #0e76a8;
+    border-color: #0e76a8;
+}
+
+footer.footer .social-link.yu:hover {
+    background-color: #FF0000;
+    border-color: #FF0000;
+}
+
+.navlinksss a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+@media (min-width: 767px) and (max-width: 1024px) {
+    .vison_misson .boxdiv {
+        background-position: top left;
+        background-repeat: no-repeat;
+        background-size: 50%;
+        display: flex;
+        height: auto;
+    }
+    .vison_misson .empaty_space {
+        height: 10px;
+    }
+    header.innerpag.stp.vm {
+        background-size: cover;
+    }
+    .contact_width {
+        width: 100%;
+    }
+    .info {
+        padding: 0 15px;
+    }
+    .info p {
+        font-size: 14px;
+    }
+    header.innerpag.stp.cn {
+        background-size: cover;
+        padding: 50px 0;
+    }
+    .stp {
+        padding: 50px 0;
+    }
+    .slidstud {
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .slidstud h3 {
+        width: 100%;
+        margin: 0 auto;
+        font-size: 12px;
+        margin-top: 14px;
+        margin-bottom: 70px;
+        font-weight: 500;
+        line-height: 19px;
+    }
+    .slidstud img {
+        width: 53px;
+        padding-top: 2px;
+        margin: 0 auto;
+    }
+    .slidstud {
+        padding: 20px 0;
+    }
+    #about .col-md-6 {
+        align-items: center;
+        align-content: center;
+        display: flex;
+    }
+    section#about {
+        overflow-x: hidden;
+    }
+    .ocbg {
+        background: -webkit-linear-gradient(#007e4b, #007fe3);
+        background-repeat: no-repeat;
+        margin: 0 auto;
+        width: 100% !important;
+        color: #fff !important;
+        padding: 40px;
+        text-align: center;
+        background-size: contain;
+        margin-top: 10px;
+        border-top-left-radius: 90px;
+        border-bottom-right-radius: 90px;
+    }
+    .edutext img {
+        width: 100%;
+    }
+    .edutext span {
+        font-size: 28px;
+    }
+}
+
+@media screen and (max-width: 767px) {
     .menu-toggle {
         left: 20px;
         top: 25px;
@@ -12141,5 +12297,129 @@ hr.wdths {
     }
     section.commitmenttext-white {
         padding: 50px 0;
+    }
+    .content-section {
+        overflow-x: hidden;
+    }
+    section.callout li {
+        text-align: center;
+        width: 100%;
+        margin: 10px 0;
+    }
+    .info {
+        width: 100%;
+        height: 400px;
+    }
+    .map {
+        width: 100%;
+        height: 400px;
+    }
+    .contact_width {
+        width: 100%;
+    }
+    header.innerpag.stp.ed {
+        background-size: cover;
+    }
+    a.carousel-control-prev {
+        display: none;
+    }
+    a.carousel-control-next {
+        display: none;
+    }
+    section.Strategic_partners span {
+        margin-left: 0;
+    }
+    section#about {
+        overflow-x: hidden;
+    }
+    .slidstud {
+        background-size: contain;
+    }
+    .slidstud h3 {
+        width: 100%;
+        margin: 0 auto;
+        font-size: 14px;
+        margin-top: 15px;
+        margin-bottom: 70px;
+        font-weight: 500;
+        line-height: 19px;
+    }
+    header.innerpag.stp.occ {
+        background-size: cover;
+    }
+    .contributor_information label {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+    .formpage {
+        width: 100%;
+        margin: 0 auto;
+    }
+    header.innerpag.stp.faq {
+        background-size: cover;
+    }
+    button.btn.btn-link.btn-block.text-left {
+        white-space: inherit;
+        padding-right: 20px !important;
+    }
+    .edutext img {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .edutext span {
+        top: 40%;
+        font-size: 22px;
+    }
+    header.innerpag.stp.undprogram {
+        background-size: cover;
+    }
+    #about h1 {
+        font-size: 30px;
+    }
+    header.innerpag.stp.fp {
+        background-size: cover;
+    }
+    header.innerpag.stp.gp {
+        background-size: cover;
+    }
+    header.innerpag.stp.campuscomunty {
+        background-size: cover;
+    }
+    header.innerpag.stp.oc {
+        background-size: cover;
+    }
+    .ocbg {
+        background: -webkit-linear-gradient(#007e4b, #007fe3);
+        background-repeat: no-repeat;
+        margin: 0 auto;
+        width: 100% !important;
+        color: #fff !important;
+        padding: 40px;
+        text-align: center;
+        background-size: contain;
+        margin-top: 10px;
+        border-top-left-radius: 90px;
+        border-bottom-right-radius: 90px;
+    }
+    header.innerpag.stp.kfn {
+        background-size: cover;
+    }
+    .boxshadoww {
+        padding: 30px;
+    }
+    header.innerpag.stp.vm {
+        background-size: cover;
+    }
+    .boxdiv {
+        background-position: top left;
+    }
+    .vison_misson .col-md-6.batboor {
+        padding-top: 500px;
+    }
+    .vison_misson .boxdiv {
+        height: auto;
+    }
+    .vison_misson .empaty_space {
+        height: 10px;
     }
 }
