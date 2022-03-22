@@ -1,5 +1,4 @@
 {% load static%}
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,9 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>KFUPM</title>
+    <title>Stylish Portfolio - Start Bootstrap Template</title>
     <link rel="icon" type="image/x-icon" href="{% static 'favicon.png' %}" />
-    <link rel=" stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
@@ -23,30 +22,34 @@
         <a class="menu-toggle rounded" href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
         <nav id="sidebar-wrapper">
             <ul class="sidebar-nav">
-                <li class="sidebar-nav-item"><a class="collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                        KFUPM Fund </a>
+                <li class="sidebar-nav-item">
+                    <a class="collapsed opentab" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        <span>KFUPM Fund<img class="aa" src="{% static 'ccl.png' %}"> <img class="bb" src="{% static 'bbc.png' %}"></span>
+                    </a>
                     <ul id="flush-collapseOne" class="collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                         <li class="accordion-body"> <a href="{% url 'intro'%}"> Introduction</a></li>
                         <li class="accordion-body"> <a href="{% url 'vision'%}"> Vision & Mission</a></li>
-                        <li class="accordion-body"> <a href="{% url 'kfupm-funds'%}"> KFUPM Fund in Numbers</a></li>
-                        <li class="accordion-body"> <a href="{% url 'commitments'%}"> Our Commitment</a></li>
+                        <li class="accordion-body"> <a href="{% url 'kfupm-funds'%}">  KFUPM Fund in Numbers</a></li>
+                        <li class="accordion-body"> <a href="{% url 'commitments'%}">   Our Commitment</a></li>
                     </ul>
                 </li>
-                <li class="sidebar-nav-item"><a class="collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOnet" aria-expanded="false" aria-controls="flush-collapseOnet">
-    Distinguished Programs
-  </a>
+                <li class="sidebar-nav-item">
+                    <a class="collapsed opentab" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOnet" aria-expanded="false" aria-controls="flush-collapseOnet">
+                        <span>Distinguished Programs<img class="aa" src="{% static 'ccl.png' %}"> <img class="bb" src="{% static 'bbc.png' %}"></span>
+                    </a>
                     <ul id="flush-collapseOnet" class="collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                         <li class="accordion-body"> <a href="{% url 'educational'%}"> Educational</a></li>
                         <li class="accordion-body"> <a href="{% url 'research'%}"> Research & Innovation</a></li>
-                        <li class="accordion-body"> <a href="{% url 'community'%}"> Campus Community</a></li>
+                        <li class="accordion-body"> <a href="{% url 'community'%}">  Campus Community</a></li>
                     </ul>
                 </li>
                 <li class="sidebar-nav-item"><a href="{% url 'patners'%}">Our Partners</a></li>
-                <li class="sidebar-nav-item"><a class="collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOnet" aria-expanded="false" aria-controls="flush-collapseOnet">
-                        How can i contribute</a>
-                    <ul id="flush-collapseOnet" class="collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                        <li class="accordion-body"> <a href="{% url 'online-contribution'%}">Online Contribution</a></li>
-                        <li class="accordion-body"> <a href="{% url 'contribution-form'%}">Contribution Form</a></li>
+                <li class="sidebar-nav-item">
+                    <a class="collapsed opentab" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOnetn" aria-expanded="false" aria-controls="flush-collapseOnetn">
+                        <span>How Can I Contribute<img class="aa" src="{% static 'ccl.png' %}"> <img class="bb" src="{% static 'bbc.png' %}"></span> </a>
+                    <ul id="flush-collapseOnetn" class="collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                        <li class="accordion-body"> <a href="{% url 'online-contribution'%}">Online contribution</a></li>
+                        <li class="accordion-body"> <a href="{% url 'contribution-form'%}">contribution Form</a></li>
                         <li class="accordion-body"> <a href="{% url 'FAQS'%}">FAQs</a></li>
                     </ul>
                 </li>
@@ -54,12 +57,12 @@
             </ul>
         </nav>
         <div class="logo">
-            <img src="{% static 'logo.png' %}">
+            <a href="{% url 'index'%}"><img src="{% static 'logo.png' %}"></a>
         </div>
     </div>
     <!-- Header-->
     <header class="innerpag stp faq">
-        <h1>FAQs</h1>
+        <h1>{{page_title}}</h1>
         <span class="infohr"></span>
     </header>
     <!-- About-->
@@ -70,14 +73,14 @@
                     <div class="card-header" id="headingOne">
                         <h2 class="mb-0">
                             <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            • What’s the purpose of KFUPM Fund?
+                            • {{question_1}}
                           </button>
                         </h2>
                     </div>
 
                     <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                         <div class="card-body">
-                            KFUPM Fund seeks to provide KFUPM with the additional resources needed to ensure the highest quality education and research to which it aspires.
+                            • {% for i in question_1_text %} {{i}} {% if not forloop.last %} <br> •{% endif %} {% endfor %}
                         </div>
                     </div>
                 </div>
@@ -85,13 +88,13 @@
                     <div class="card-header" id="headingTwo">
                         <h2 class="mb-0">
                             <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            • I would like to contribute; through what ways do you accept contributions
+                            • {{question_2}}
                           </button>
                         </h2>
                     </div>
                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                         <div class="card-body">
-                            Some placeholder content for the second accordion panel. This panel is hidden by default.
+                            • {% for i in question_2_text %} {{i}} {% if not forloop.last %} <br> •{% endif %} {% endfor %}
                         </div>
                     </div>
                 </div>
@@ -99,13 +102,13 @@
                     <div class="card-header" id="headingThree">
                         <h2 class="mb-0">
                             <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            • How are the funds allocated to the various activities of the University?
+                            • {{question_3}}
                           </button>
                         </h2>
                     </div>
                     <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                         <div class="card-body">
-                            And lastly, the placeholder content for the third and final accordion panel. This panel is hidden by default.
+                            • {% for i in question_3_text %} {{i}} {% if not forloop.last %} <br> •{% endif %} {% endfor %}
                         </div>
                     </div>
                 </div>
@@ -113,13 +116,13 @@
                     <div class="card-header" id="headingfour">
                         <h2 class="mb-0">
                             <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTfour" aria-expanded="false" aria-controls="headingfour">
-                                • Can I contribute to a specific project?
+                                • {{question_4}}
                             </button>
                         </h2>
                     </div>
                     <div id="collapseTfour" class="collapse" aria-labelledby="headingfour" data-parent="#accordionExample">
                         <div class="card-body">
-                            And lastly, the placeholder content for the third and final accordion panel. This panel is hidden by default.
+                            • {% for i in question_4_text %} {{i}} {% if not forloop.last %} <br> •{% endif %} {% endfor %}
                         </div>
                     </div>
                 </div>
@@ -127,13 +130,13 @@
                     <div class="card-header" id="headingfour">
                         <h2 class="mb-0">
                             <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTsix" aria-expanded="false" aria-controls="headingfour">
-                                • Are contributions taxable?
+                                • {{question_5}}
                             </button>
                         </h2>
                     </div>
                     <div id="collapseTsix" class="collapse" aria-labelledby="headingfour" data-parent="#accordionExample">
                         <div class="card-body">
-                            And lastly, the placeholder content for the third and final accordion panel. This panel is hidden by default.
+                            • {% for i in question_5_text %} {{i}} {% if not forloop.last %} <br> •{% endif %} {% endfor %}
                         </div>
                     </div>
                 </div>
@@ -141,19 +144,21 @@
                     <div class="card-header" id="headingfour">
                         <h2 class="mb-0">
                             <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTfive" aria-expanded="false" aria-controls="headingfour">
-                                • Do you have a brochure?
+                                • {{question_6}}
                             </button>
                         </h2>
                     </div>
                     <div id="collapseTfive" class="collapse" aria-labelledby="headingfour" data-parent="#accordionExample">
                         <div class="card-body">
-                            And lastly, the placeholder content for the third and final accordion panel. This panel is hidden by default.
+                            • {% for i in question_6_text %} {{i}} {% if not forloop.last %} <br> •{% endif %} {% endfor %}
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Footer-->
 
     <!-- Footer-->
     <footer class="footer text-center">
@@ -163,16 +168,16 @@
                     <h3>Contact Us</h3>
                     <ul class="list-inline mb-5">
                         <li class="list-inline-item">
-                            <a class="social-link rounded-circle text-white" href="#!"><i class="fa fa-facebook"></i></a>
+                            <a class="social-link rounded-circle text-white fb" href="{{Links.facebook_url}}"><i class="fa fa-facebook"></i></a>
                         </li>
                         <li class="list-inline-item">
-                            <a class="social-link rounded-circle text-white" href="#!"><i class="fa fa-twitter"></i></a>
+                            <a class="social-link rounded-circle text-white tw" href="{{Links.twitter_url}}"><i class="fa fa-twitter"></i></a>
                         </li>
                         <li class="list-inline-item">
-                            <a class="social-link rounded-circle text-white" href="#!"><i class="fa fa-linkedin"></i></a>
+                            <a class="social-link rounded-circle text-white li" href="{{Links.linkedin_url}}"><i class="fa fa-linkedin"></i></a>
                         </li>
                         <li class="list-inline-item">
-                            <a class="social-link rounded-circle text-white" href="#!"><i class="fa fa-youtube"></i></a>
+                            <a class="social-link rounded-circle text-white yu" href="{{Links.youTube_url}}"><i class="fa fa-youtube"></i></a>
                         </li>
                     </ul>
                 </div>
@@ -180,16 +185,16 @@
 
                     <div class="newsll">
                         <label>Join Our Newsletter</label>
-                        <input type="text" value="" placeholder="Email address">
+                        <input type="text" name="newsletter" id="newsletter" value="" placeholder="Email address">
                     </div>
                 </div>
                 <div class="col-md-4 navlinksss">
                     <ul class="list-inline mb-5">
                         <li class="list-inline-item">
-                            <a class="" href="#!">Contributor Form</a>
+                            <a class="" href="contribution_form.html">Contributor Form</a>
                         </li>
                         <li class="list-inline-item">
-                            <a class="" href="#!">Download Brochure</a>
+                            <a class="" target="_blank" href="{{Links.brochure_pdf}}">Download Brochure</a>
                         </li>
                     </ul>
                 </div>

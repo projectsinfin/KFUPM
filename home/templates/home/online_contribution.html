@@ -1,5 +1,4 @@
 {% load static%}
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,30 +21,34 @@
         <a class="menu-toggle rounded" href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
         <nav id="sidebar-wrapper">
             <ul class="sidebar-nav">
-                <li class="sidebar-nav-item"><a class="collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                        KFUPM Fund </a>
+                <li class="sidebar-nav-item">
+                    <a class="collapsed opentab" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        <span>KFUPM Fund<img class="aa" src="{% static 'ccl.png' %}"> <img class="bb" src="{% static 'bbc.png' %}"></span>
+                    </a>
                     <ul id="flush-collapseOne" class="collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                         <li class="accordion-body"> <a href="{% url 'intro'%}"> Introduction</a></li>
                         <li class="accordion-body"> <a href="{% url 'vision'%}"> Vision & Mission</a></li>
-                        <li class="accordion-body"> <a href="{% url 'kfupm-funds'%}"> KFUPM Fund in Numbers</a></li>
-                        <li class="accordion-body"> <a href="{% url 'commitments'%}"> Our Commitment</a></li>
+                        <li class="accordion-body"> <a href="{% url 'kfupm-funds'%}">  KFUPM Fund in Numbers</a></li>
+                        <li class="accordion-body"> <a href="{% url 'commitments'%}">   Our Commitment</a></li>
                     </ul>
                 </li>
-                <li class="sidebar-nav-item"><a class="collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOnet" aria-expanded="false" aria-controls="flush-collapseOnet">
-    Distinguished Programs
-  </a>
+                <li class="sidebar-nav-item">
+                    <a class="collapsed opentab" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOnet" aria-expanded="false" aria-controls="flush-collapseOnet">
+                        <span>Distinguished Programs<img class="aa" src="{% static 'ccl.png' %}"> <img class="bb" src="{% static 'bbc.png' %}"></span>
+                    </a>
                     <ul id="flush-collapseOnet" class="collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                         <li class="accordion-body"> <a href="{% url 'educational'%}"> Educational</a></li>
                         <li class="accordion-body"> <a href="{% url 'research'%}"> Research & Innovation</a></li>
-                        <li class="accordion-body"> <a href="{% url 'community'%}"> Campus Community</a></li>
+                        <li class="accordion-body"> <a href="{% url 'community'%}">  Campus Community</a></li>
                     </ul>
                 </li>
                 <li class="sidebar-nav-item"><a href="{% url 'patners'%}">Our Partners</a></li>
-                <li class="sidebar-nav-item"><a class="collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOnet" aria-expanded="false" aria-controls="flush-collapseOnet">
-                        How can i contribute</a>
-                    <ul id="flush-collapseOnet" class="collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                        <li class="accordion-body"> <a href="{% url 'online-contribution'%}">Online Contribution</a></li>
-                        <li class="accordion-body"> <a href="{% url 'contribution-form'%}">Contribution Form</a></li>
+                <li class="sidebar-nav-item">
+                    <a class="collapsed opentab" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOnetn" aria-expanded="false" aria-controls="flush-collapseOnetn">
+                        <span>How Can I Contribute<img class="aa" src="{% static 'ccl.png' %}"> <img class="bb" src="{% static 'bbc.png' %}"></span> </a>
+                    <ul id="flush-collapseOnetn" class="collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                        <li class="accordion-body"> <a href="{% url 'online-contribution'%}">Online contribution</a></li>
+                        <li class="accordion-body"> <a href="{% url 'contribution-form'%}">contribution Form</a></li>
                         <li class="accordion-body"> <a href="{% url 'FAQS'%}">FAQs</a></li>
                     </ul>
                 </li>
@@ -53,12 +56,12 @@
             </ul>
         </nav>
         <div class="logo">
-            <img src="{% static 'logo.png' %}">
+            <a href="{% url 'index'%}"><img src="{% static 'logo.png' %}"></a>
         </div>
     </div>
     <!-- Header-->
     <header class="innerpag stp campuscomunty occ">
-        <h1>Online Contribution</h1>
+        <h1>{{page_title}}</h1>
         <span class="infohr"></span>
     </header>
     <!-- About-->
@@ -66,38 +69,39 @@
         <div class="container">
             <div class="row marg-b formpage">
                 <div class="col-md-6">
-                    <form class="contributor_information">
+                    <form class="contributor_information" action="{% url 'submit-form'%}" class="contributor_information" method="post">
+                        {% csrf_token %}
                         <label>Contributor Information</label>
-                        <input type="text" placeholder="First name" value="" class="form-control col-md-12">
-                        <input type="text" placeholder="Last name" value="" class="form-control col-md-12">
-                        <input type="text" placeholder="E-mail" value="" class="form-control col-md-12">
-                        <input type="text" placeholder="Country" value="" class="form-control col-md-12">
-                        <select class="form-control col-md-12">
+                        <input type="text" name="fname" id="fname" placeholder="First name" value="" class="form-control col-md-12">
+                        <input type="text" name="lname" id="lname" placeholder="Last name" value="" class="form-control col-md-12">
+                        <input type="text" name="email" id="email" placeholder="E-mail" value="" class="form-control col-md-12">
+                        <input type="text" name="Country" id="Country" placeholder="Country" value="" class="form-control col-md-12">
+                        <select name="Region" id="Region" class="form-control col-md-12">
                            <option>Region</option>
                        </select>
                         <select class="form-control col-md-12">
                         <option>City</option>
                        </select>
-                        <input type="text" placeholder="Address" value="" class="form-control col-md-12">
-                        <input type="text" placeholder="Mobile Number" value="" class="form-control col-md-12">
-                        <input type="text" placeholder="KFUMP ID" value="" class="form-control col-md-12">
+                        <input type="text" name="Address" id="Address" placeholder="Address" value="" class="form-control col-md-12">
+                        <input type="text" name="Mobile" id="Mobile" placeholder="Mobile Number" value="" class="form-control col-md-12">
+                        <input type="text" name="KFUMP" id="KFUMP" placeholder="KFUMP ID" value="" class="form-control col-md-12">
                         <label class="mt-5">Contributor Information</label>
-                        <input type="text" placeholder="Amount to Contribute (SAR)" value="" class="form-control col-md-12">
-                        <select class="form-control col-md-12">
+                        <input type="text" name="Amount" id="Amount" placeholder="Amount to Contribute (SAR)" value="" class="form-control col-md-12">
+                        <select name="Program" id="Program" class="form-control col-md-12">
                         <option>Program to Support</option>
                        </select>
                         <label class="mt-5">Would you like to publish<br>
                         your name and the contribution<br>
                         amount in KFUPM publications?</label><br>
-                        <input type="radio" id="age1" name="age" value="30">
+                        <input name="Yes" id="Yes" type="radio" id="age1" name="age" value="30">
                         <strong for="age1">Yes</strong><br>
-                        <input type="radio" id="age2" name="age" value="60">
+                        <input name="No" id="No" type="radio" id="age2" name="age" value="60">
                         <strong for="age2">No</strong><br>
                         <label class="mt-5">Payment Information</label>
-                        <input type="text" placeholder="Name on card" value="" class="form-control col-md-12">
-                        <input type="text" placeholder="Card number" value="" class="form-control col-md-12">
-                        <input type="text" placeholder="MM / YY" value="" class="form-control col-md-12">
-                        <input type="text" placeholder="CVV" value="" class="form-control col-md-12">
+                        <input name="card" id="card" type="text" placeholder="Name on card" value="" class="form-control col-md-12">
+                        <input name="number" id="number" type="text" placeholder="Card number" value="" class="form-control col-md-12">
+                        <input name="date" id="date" type="text" placeholder="MM / YY" value="" class="form-control col-md-12">
+                        <input name="Address1" id="Address1" type="text" placeholder="CVV" value="" class="form-control col-md-12">
                         <button class="btn button mt-5">Submit Contribution</button>
                     </form>
                 </div>
@@ -109,6 +113,8 @@
     </section>
 
     <!-- Footer-->
+
+    <!-- Footer-->
     <footer class="footer text-center">
         <div class="container">
             <div class="row">
@@ -116,16 +122,16 @@
                     <h3>Contact Us</h3>
                     <ul class="list-inline mb-5">
                         <li class="list-inline-item">
-                            <a class="social-link rounded-circle text-white" href="#!"><i class="fa fa-facebook"></i></a>
+                            <a class="social-link rounded-circle text-white fb" href="{{Links.facebook_url}}"><i class="fa fa-facebook"></i></a>
                         </li>
                         <li class="list-inline-item">
-                            <a class="social-link rounded-circle text-white" href="#!"><i class="fa fa-twitter"></i></a>
+                            <a class="social-link rounded-circle text-white tw" href="{{Links.twitter_url}}"><i class="fa fa-twitter"></i></a>
                         </li>
                         <li class="list-inline-item">
-                            <a class="social-link rounded-circle text-white" href="#!"><i class="fa fa-linkedin"></i></a>
+                            <a class="social-link rounded-circle text-white li" href="{{Links.linkedin_url}}"><i class="fa fa-linkedin"></i></a>
                         </li>
                         <li class="list-inline-item">
-                            <a class="social-link rounded-circle text-white" href="#!"><i class="fa fa-youtube"></i></a>
+                            <a class="social-link rounded-circle text-white yu" href="{{Links.youTube_url}}"><i class="fa fa-youtube"></i></a>
                         </li>
                     </ul>
                 </div>
@@ -133,16 +139,16 @@
 
                     <div class="newsll">
                         <label>Join Our Newsletter</label>
-                        <input type="text" value="" placeholder="Email address">
+                        <input type="text" name="newsletter" id="newsletter" value="" placeholder="Email address">
                     </div>
                 </div>
                 <div class="col-md-4 navlinksss">
                     <ul class="list-inline mb-5">
                         <li class="list-inline-item">
-                            <a class="" href="#!">Contributor Form</a>
+                            <a class="" href="contribution_form.html">Contributor Form</a>
                         </li>
                         <li class="list-inline-item">
-                            <a class="" href="#!">Download Brochure</a>
+                            <a class="" target="_blank" href="{{Links.brochure_pdf}}">Download Brochure</a>
                         </li>
                     </ul>
                 </div>
