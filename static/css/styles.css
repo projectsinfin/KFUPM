@@ -11199,8 +11199,8 @@ html {
 
 .menu-toggle {
     position: absolute;
-    left: 0;
-    top: 45px;
+    left: -35px;
+    top: 30px;
     width: 50px;
     height: 50px;
     text-align: center;
@@ -11372,7 +11372,7 @@ footer.footer .social-link:hover {
 
 .logo {
     position: absolute;
-    right: 0;
+    right: -50px;
     top: 20px;
     z-index: 99;
 }
@@ -11583,15 +11583,23 @@ footer.footer .social-link {
 }
 
 .active ul.sidebar-nav {
-    left: -23px;
-    width: 350px;
+    left: -76px;
+    width: 380px;
     transition: all 0.4s ease 0s;
     top: 25px;
     height: auto;
     background: #ffffffe8;
-    padding: 75px 20px;
+    padding: 75px 35px;
 }
 
+.parternsList{
+    display: flex;
+    justify-content: space-between;
+}
+
+.sidebar-nav li.sidebar-nav-item a {
+    font-size: 1.3em;
+}
 .sidebar-nav {
     position: absolute;
     z-index: 2;
@@ -11646,6 +11654,8 @@ section.infores p {
 
 .slidstud {
     background: url(../Path.png);
+    background-size: 420px !important;
+    background-position-x: center;
     text-align: center;
     color: #fff;
     padding: 60px 0;
@@ -11658,7 +11668,7 @@ section.infores p {
 
 .slidstud h3 {
     width: 80%;
-    margin: 0 auto;
+    margin: 0 80px;
     font-size: 19px;
     margin-top: 30px;
     margin-bottom: 70px;

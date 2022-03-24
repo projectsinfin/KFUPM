@@ -96,7 +96,11 @@
             <h2><span><label>{{title_2}}</label></span></h2>
             <div class="row ml-5">
                 <div class="col-md-12 partn mt-5">
-                    <p>{% for i in all_patners %} {{i}} {% if not forloop.last %} <br>{% endif %} {% endfor %}</p>
+                    <div class="parternsList">
+                        <p>{% for i in all_patners|slice:"10" %} {{i}} {% if not forloop.last %} <br>{% endif %} {% endfor %}</p>
+                        <p>{% for i in all_patners|slice:"10" %} {{i}} {% if not forloop.last %} <br>{% endif %} {% endfor %}</p>
+                        <p>{% for i in all_patners|slice:"10" %} {{i}} {% if not forloop.last %} <br>{% endif %} {% endfor %}</p>
+                    </div>
                     <!-- <hr> -->
                 </div>
                 <!-- <div class="col-md-4 partn">
@@ -146,10 +150,7 @@
                     <!-- Wrapper for carousel items -->
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <div class="row">
-                                <div class="col-md-2">
-
-                                </div>
+                            <div class="row" style="justify-content: center;">
                                 <div class="slidstud col-md-4">
                                     <img src="{% static 'icong16.png' %}">
                                     <h3>{{research_center_1}}
@@ -158,9 +159,6 @@
                                 <div class="slidstud col-md-4">
                                     <img src="{% static 'icong17.png' %}">
                                     <h3>{{research_center_2}}</h3>
-                                </div>
-                                <div class="col-md-2">
-
                                 </div>
                             </div>
                         </div>
