@@ -17,6 +17,11 @@ def index(request):
     try:
         content_data = HomePage.objects.all()
         content_data = content_data[len(content_data)-1]
+        Number = FundsNumber.objects.all()
+        Number = Number[len(Number)-1]
+        del Number._state
+        del Number.id
+        Number = Number.__dict__
         Links = get_link()
         data = {'title_1':content_data.title_1,
                 'title_1_text':[i.strip() for i in content_data.title_1_text.split('\n') if i.strip() != ''],
@@ -26,7 +31,7 @@ def index(request):
                 'title_4':content_data.title_4,
                 'title_4_text':[i.strip() for i in content_data.title_4_text.split('\n') if i.strip() != ''],
                 'title_5':content_data.title_5,
-                'title_5_text':[i.strip() for i in content_data.title_5_text.split('\n') if i.strip() != ''],'Links':Links}
+                'title_5_text':[i.strip() for i in content_data.title_5_text.split('\n') if i.strip() != ''],'Links':Links,'Number':Number}
         # print(d/ata)
         # del Links['id']
         # data = data.update(Links)
@@ -101,7 +106,22 @@ def campus_community(request):
         return render(request, 'home/campus_community.html', {})
 
 def research(request):
-    return render(request, 'home/research_&_innovation.html', {})
+    try:
+        content_data = ResearchInnovation.objects.all()
+        content_data = content_data[len(content_data)-1]
+        del content_data._state
+        Links = get_link()
+        content_data.title_1_text = [i.strip() for i in content_data.title_1_text.split('\n') if i.strip() != '']
+        content_data.title_2_text = [i.strip() for i in content_data.title_2_text.split('\n') if i.strip() != '']
+        content_data.title_3_text = [i.strip() for i in content_data.title_3_text.split('\n') if i.strip() != '']
+        content_data.title_4_text = [i.strip() for i in content_data.title_4_text.split('\n') if i.strip() != '']
+        content_data.title_5_text = [i.strip() for i in content_data.title_5_text.split('\n') if i.strip() != '']
+        content_data.title_6_text = [i.strip() for i in content_data.title_6_text.split('\n') if i.strip() != '']
+        content_data.__dict__['Links']=Links
+        return render(request, 'home/research_&_innovation.html', content_data.__dict__)
+    except:
+        return render(request, 'home/research_&_innovation.html', {})
+        
 
 def educational(request):
     try:
@@ -160,12 +180,26 @@ def summertraning(request):
         
 
 def partner(request):
-    return render(request, 'home/sponsorspartners.html', {})
+    try:
+        content_data = PatnerPage.objects.all()
+        content_data = content_data[len(content_data)-1]
+        del content_data._state
+        Links = get_link()
+        content_data.all_patners = [i.strip() for i in content_data.all_patners.split('\n') if i.strip() != '']
+        content_data.__dict__['Links']=Links
+        return render(request, 'home/sponsorspartners.html', content_data.__dict__)
+    except:
+        return render(request, 'home/sponsorspartners.html', {})
 
 def facts(request):
     try:
+        content_data = FundsNumber.objects.all()
+        content_data = content_data[len(content_data)-1]
+        del content_data._state
         Links = get_link()
-        return render(request, 'home/facts_figures.html', {'Links':Links})
+        # content_data.title_1_text = [i.strip() for i in content_data.title_1_text.split('\n') if i.strip() != '']
+        content_data.__dict__['Links']=Links
+        return render(request, 'home/facts_figures.html', content_data.__dict__)
     except:
         return render(request, 'home/facts_figures.html', {})
 

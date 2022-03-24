@@ -63,19 +63,18 @@
     </div>
     <!-- Header-->
     <header class="innerpag stp ed">
-        <h1>Our Partners</h1>
+        <h1>{{page_title}}</h1>
         <span class="infohr"></span>
     </header>
     <!-- About-->
     <section class="infores">
         <div class="container">
-            <p>We value our sponsors and contributors and understand the trust and intent with which they choose to contribute to us. While contributions often differ in sizes depending on where they are arising from i.e. institutional sponsors, individual
-                sponsors etc. we understand the responsibility that we need to maintain to all equally.</p>
+            <p>{{page_content}}</p>
             <div>
     </section>
     <section class="Strategic_partners">
         <div class="container">
-            <h2><span><label>Strategic partners</label></span></h2>
+            <h2><span><label>{{title_1}}</label></span></h2>
             <div class="row">
                 <div class="col-md-4 partnerss">
                     <img class="mb-5" src="{% static 'p1.png' %}">
@@ -94,13 +93,13 @@
     </section>
     <section class="Strategic_partners commitmenttext-white">
         <div class="container">
-            <h2><span><label>Partners</label></span></h2>
+            <h2><span><label>{{title_2}}</label></span></h2>
             <div class="row ml-5">
                 <div class="col-md-12 partn mt-5">
-                    <p>Mohamad Ali Al-Lohaidan</p>
-                    <hr>
+                    <p>{% for i in all_patners %} {{i}} {% if not forloop.last %} <br>{% endif %} {% endfor %}</p>
+                    <!-- <hr> -->
                 </div>
-                <div class="col-md-4 partn">
+                <!-- <div class="col-md-4 partn">
                     <p>
                         Abdul-Fattah Abdullah Bakhit<br> Abdulla Abdulrahman Al-Mogbel<br> Adel Ahmed Hassan Basri<br> Ahmad Saad Al-Gahtani<br> Ahmed Abdulrahman Al-Mousa<br> FAHAD DAKHILALLAH AL-SHABRAMI<br> Mohammed Faraj Alzahrani<br> Muhammad Ahmed
                         Ba-Yamin
@@ -114,9 +113,9 @@
                 </div>
                 <div class="col-md-4 partnerss br-0">
 
-                </div>
+                </div> -->
             </div>
-            <div class="row ml-5">
+            <!-- <div class="row ml-5">
                 <div class="col-md-12 partn">
                     <hr>
                 </div>
@@ -134,12 +133,12 @@
                 <div class="col-md-4 partnerss br-0">
 
                 </div>
-            </div>
+            </div> -->
             <div>
     </section>
     <section class="infores bg-light" id="about">
         <div class="container">
-            <h1 class="text-left mb-5">Sponsorship/Partnership Benefits</h1>
+            <h1 class="text-left mb-5">{{slider_title}}</h1>
             <div class="container-lg my-3">
                 <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
                     <!-- Carousel indicators -->
@@ -153,12 +152,12 @@
                                 </div>
                                 <div class="slidstud col-md-4">
                                     <img src="{% static 'icong16.png' %}">
-                                    <h3>Alumni center<br> within University<br> campus
+                                    <h3>{{research_center_1}}
                                     </h3>
                                 </div>
                                 <div class="slidstud col-md-4">
                                     <img src="{% static 'icong17.png' %}">
-                                    <h3>Provide discounts<br> benefits and<br> other services</h3>
+                                    <h3>{{research_center_2}}</h3>
                                 </div>
                                 <div class="col-md-2">
 
@@ -169,17 +168,17 @@
                             <div class="row">
                                 <div class="slidstud col-md-4">
                                     <img src="{% static 'icong18.png' %}">
-                                    <h3>Recognition programs<br> (beyond financial<br> recognition)
+                                    <h3>{{research_center_3}}
                                     </h3>
                                 </div>
                                 <div class="slidstud col-md-4">
                                     <img src="{% static 'icong19.png' %}">
-                                    <h3>Facilitate alumni<br> gathering events<br> (Tawassul events)
+                                    <h3>{{research_center_4}}
                                     </h3>
                                 </div>
                                 <div class="slidstud col-md-4">
                                     <img src="{% static 'icong20.png' %}">
-                                    <h3>Make university<br> more accessible<br> to alumni</h3>
+                                    <h3>{{research_center_5}}</h3>
                                 </div>
                             </div>
                         </div>
@@ -187,15 +186,15 @@
                             <div class="row">
                                 <div class="slidstud col-md-4">
                                     <img src="{% static 'icong21.png' %}">
-                                    <h3>Introduce professional<br> development programs<br> for alumni </h3>
+                                    <h3>{{research_center_6}}</h3>
                                 </div>
                                 <div class="slidstud col-md-4">
                                     <img src="{% static 'icong22.png' %}">
-                                    <h3>Career program<br> facility for alumni </h3>
+                                    <h3>{{research_center_7}}</h3>
                                 </div>
                                 <div class="slidstud col-md-4">
                                     <img src="{% static 'icong23.png' %}">
-                                    <h3>Create ambassador<br> program
+                                    <h3>{{research_center_8}}
                                     </h3>
                                 </div>
                             </div>
@@ -248,7 +247,7 @@
                 <div class="col-md-4 navlinksss">
                     <ul class="list-inline mb-5">
                         <li class="list-inline-item">
-                            <a class="" href="contribution_form.html">Contributor Form</a>
+                            <a class="" href="{% url 'contribution-form'%}">Contributor Form</a>
                         </li>
                         <li class="list-inline-item">
                             <a class="" target="_blank" href="{{Links.brochure_pdf}}">Download Brochure</a>
@@ -258,10 +257,10 @@
                 <div class="col-md-4 navlinksss">
                     <ul class="list-inline mb-5">
                         <li class="list-inline-item">
-                            <a class="" href="#!">KFUPM News</a>
+                            <a class="" href="{{Links.KFUPM_News}}">KFUPM News</a>
                         </li>
                         <li class="list-inline-item">
-                            <a class="" href="#!">Alumni Portal</a>
+                            <a class="" href="{{Links.alumni_portal}}">Alumni Portal</a>
                         </li>
                     </ul>
                 </div>

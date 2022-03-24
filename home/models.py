@@ -9,6 +9,8 @@ class Link(models.Model):
     linkedin_url = models.URLField()
     youTube_url = models.URLField()
     youTube_video_url = models.URLField()
+    alumni_portal = models.URLField()
+    KFUPM_News = models.URLField()
     brochure_pdf = models.FileField(upload_to='static/')
     
 class HomePage(models.Model):
@@ -144,6 +146,97 @@ class ContactUsPage(models.Model):
     email = models.EmailField(max_length = 254)
     phone_no = PhoneNumberField(null=False, blank=False, unique=True)
     place_name = models.CharField(max_length=200)
+    
+    def __str__(self):              # __unicode__ on Python 2
+        return self.page_title
+    
+class ResearchInnovation(models.Model):
+    page_title = models.TextField()
+    page_content = models.TextField()
+    slider_title = models.TextField()
+    research_center_1 = models.TextField()
+    research_center_2 = models.TextField()
+    research_center_3 = models.TextField()
+    research_center_4 = models.TextField()
+    research_center_5 = models.TextField()
+    research_center_6 = models.TextField()
+    research_center_7 = models.TextField()
+    research_center_8 = models.TextField()
+    research_center_9 = models.TextField()
+    research_center_10 = models.TextField()
+    research_center_11 = models.TextField()
+    research_center_12 = models.TextField()
+    research_center_13 = models.TextField()
+    research_center_14 = models.TextField()
+    research_center_15 = models.TextField()
+    research_center_16 = models.TextField()
+    title_1 = models.TextField()
+    title_1_objective = models.TextField(blank = True)
+    title_1_text = models.TextField()
+    title_2 = models.TextField()
+    title_2_objective = models.TextField(blank = True)
+    title_2_text = models.TextField()
+    title_3 = models.TextField()
+    title_3_objective = models.TextField(blank = True)
+    title_3_text = models.TextField()
+    title_4 = models.TextField()
+    title_4_objective = models.TextField(blank = True)
+    title_4_text = models.TextField()
+    title_5 = models.TextField()
+    title_5_objective = models.TextField(blank = True)
+    title_5_text = models.TextField()
+    title_6 = models.TextField()
+    title_6_objective = models.TextField(blank = True)
+    title_6_text = models.TextField()
+    
+    def __str__(self):              # __unicode__ on Python 2
+        return self.page_title
+    
+class FundsNumber(models.Model):
+    page_title = models.TextField()
+    main_title = models.TextField()
+    number_1 = models.CharField(max_length=200)
+    number_1_title = models.TextField()
+    number_1_text = models.TextField()
+    number_2 = models.CharField(max_length=200)
+    number_2_title = models.TextField()
+    number_2_text = models.TextField()
+    number_3 = models.CharField(max_length=200)
+    number_3_title = models.TextField()
+    number_3_text = models.TextField()
+    number_4 = models.CharField(max_length=200)
+    number_4_title = models.TextField()
+    number_4_text = models.TextField()
+    number_5 = models.CharField(max_length=200)
+    number_5_title = models.TextField()
+    number_5_text = models.TextField()
+    number_6 = models.CharField(max_length=200)
+    number_6_title = models.TextField()
+    number_6_text = models.TextField()
+    number_7 = models.CharField(max_length=200)
+    number_7_title = models.TextField()
+    number_7_text = models.TextField()
+    number_8 = models.CharField(max_length=200)
+    number_8_title = models.TextField()
+    number_8_text = models.TextField()
+    def __str__(self):              # __unicode__ on Python 2
+        return self.page_title
+    
+class PatnerPage(models.Model):
+    page_title = models.TextField()
+    page_content = models.TextField()
+    title_1 = models.TextField()
+    title_2 = models.TextField()
+    all_patners = models.TextField()
+    slider_title = models.TextField()
+    research_center_1 = models.TextField()
+    research_center_2 = models.TextField()
+    research_center_3 = models.TextField()
+    research_center_4 = models.TextField()
+    research_center_5 = models.TextField()
+    research_center_6 = models.TextField()
+    research_center_7 = models.TextField()
+    research_center_8 = models.TextField()
     
     def __str__(self):              # __unicode__ on Python 2
         return self.page_title

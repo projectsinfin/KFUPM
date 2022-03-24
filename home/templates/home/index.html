@@ -103,26 +103,26 @@
             <div class="row">
                 <div class="row gx-4 gx-lg-5">
                     <div data-aos="zoom-out-up" class="col-lg-4 kfumnumber">
-                        <span>17</span>
-                        <h5>PROGRAMS</h5>
+                        <span>{{Number.number_1}}</span>
+                        <h5>{{Number.number_1_title}}</h5>
                         <hr>
 
-                        <p class="">Supported Fund<br> (2022 – 2023)</p>
+                        <p class="">{{Number.number_1_text}}</p>
                     </div>
                     <div data-aos="zoom-out-up" class="col-lg-5 kfumnumber mb-3">
-                        <span>38</span>
-                        <h5>SCHOLARSHIPS</h5>
+                        <span>{{Number.number_2}}</span>
+                        <h5>{{Number.number_2_title}}</h5>
                         <hr>
 
-                        <p class="">Supported under the<br> (Scholarships Program for<br> Non- Saudi Undergraduate<br> Students)
+                        <p class="">{{Number.number_2_text}}
                         </p>
                     </div>
                     <div data-aos="zoom-out-up" class="col-lg-3 kfumnumber">
-                        <span>28</span>
-                        <h5>PROFESSORS</h5>
+                        <span>{{Number.number_3}}</span>
+                        <h5>{{Number.number_3_title}}</h5>
                         <hr>
 
-                        <p class="">(Attracting Outstanding<br> Faculty Members<br> Program)
+                        <p class="">{{Number.number_3_text}}
                         </p>
                     </div>
                 </div>
@@ -130,43 +130,43 @@
             <div class="row">
                 <div class="row gx-4 gx-lg-5">
                     <div data-aos="zoom-out-up" class="col-lg-4 kfumnumber">
-                        <span>20</span>
-                        <h5>PHD STUDENTS</h5>
+                        <span>{{Number.number_4}}</span>
+                        <h5>{{Number.number_4_title}}</h5>
                         <hr>
 
-                        <p class="">(2020 – 2021)</p>
+                        <p class="">{{Number.number_4_text}}</p>
                     </div>
                     <div data-aos="zoom-out-up" class="col-lg-5 kfumnumber mb-3">
-                        <span>20 MX</span>
-                        <h5>SCHOLARSHIPS</h5>
+                        <span>{{Number.number_5}}</span>
+                        <h5>{{Number.number_5_title}}</h5>
                         <hr>
 
-                        <p class="">to be supported in<br> (2022 – 2023)</p>
+                        <p class="">{{Number.number_5_text}}</p>
                     </div>
                     <div data-aos="zoom-out-up" class="col-lg-3 kfumnumber">
-                        <span>40 CX</span>
-                        <h5>STUDENTS</h5>
+                        <span>{{Number.number_6}}</span>
+                        <h5>{{Number.number_6_title}}</h5>
                         <hr>
 
-                        <p class="">(2020 – 2023)</p>
+                        <p class="">{{Number.number_6_text}}</p>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="row gx-4 gx-lg-5 kfumnumber">
                     <div data-aos="zoom-out-up" class="col-lg-4">
-                        <span>14.7</span>
-                        <h5>MILLION SAR</h5>
+                        <span>{{Number.number_7}}</span>
+                        <h5>{{Number.number_7_title}}</h5>
                         <hr>
 
-                        <p class="">Programs Spending<br> (2020 – 2021)</p>
+                        <p class="">{{Number.number_7_text}}</p>
                     </div>
                     <div data-aos="zoom-out-up" class="col-lg-4 kfumnumber">
-                        <span>+30</span>
-                        <h5>MILLION SAR</h5>
+                        <span>{{Number.number_8}}</span>
+                        <h5>{{Number.number_8_title}}</h5>
                         <hr>
 
-                        <p class="">Programs Budget<br> (2022 – 2023)</p>
+                        <p class="">{{Number.number_8_text}}</p>
                     </div>
                 </div>
             </div>
@@ -231,7 +231,7 @@
                 <div class="col-md-4 navlinksss">
                     <ul class="list-inline mb-5">
                         <li class="list-inline-item">
-                            <a class="" href="contribution_form.html">Contributor Form</a>
+                            <a class="" href="{% url 'contribution-form'%}">Contributor Form</a>
                         </li>
                         <li class="list-inline-item">
                             <a class="" target="_blank" href="{{Links.brochure_pdf}}">Download Brochure</a>
@@ -241,10 +241,10 @@
                 <div class="col-md-4 navlinksss">
                     <ul class="list-inline mb-5">
                         <li class="list-inline-item">
-                            <a class="" href="#!">KFUPM News</a>
+                            <a class="" href="{{Links.KFUPM_News}}">KFUPM News</a>
                         </li>
                         <li class="list-inline-item">
-                            <a class="" href="#!">Alumni Portal</a>
+                            <a class="" href="{{Links.alumni_portal}}">Alumni Portal</a>
                         </li>
                     </ul>
                 </div>

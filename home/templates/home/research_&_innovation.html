@@ -63,20 +63,19 @@
     </div>
     <!-- Header-->
     <header class="innerpage">
-        <h1>Research & Innovation</h1>
+        <h1>{{page_title}}</h1>
         <span class="infohr"></span>
     </header>
     <!-- About-->
     <section class="infores">
         <div class="container">
-            <p>Research activities at KFUPM are aligned & guided by the needs of the Kingdom, and thus have<br> created a strong research base, and is recognized for solving critical scientific and technical<br> problems as well as turning knowledge into
-                practice.
+            <p>{{page_content}}
             </p>
             <div>
     </section>
     <section class="infores bg-light">
         <div class="container">
-            <h5 class="text-center mb-5">At KFUPM, there are 16 Research Centers: IRC (Interdisciplinary), ARC (Applied), JRC (Joint)</h5>
+            <h5 class="text-center mb-5">{{slider_title}}</h5>
             <div class="container-lg my-3">
                 <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
                     <!-- Carousel indicators -->
@@ -90,7 +89,7 @@
                                 </div>
                                 <div class="slidstud col-md-4">
                                     <img src="{% static 'icon1.png' %}">
-                                    <h3>Strategic <br> Studies & Planning</h3>
+                                    <h3>{{research_center_1}}</h3>
                                 </div>
                                 <div class="col-md-4">
 
@@ -101,16 +100,16 @@
                             <div class="row">
                                 <div class="slidstud col-md-4">
                                     <img src="{% static 'icon2.png' %}">
-                                    <h3>Metrology, Standards<br> and Calibration</h3>
+                                    <h3>{{research_center_2}}</h3>
                                 </div>
                                 <div class="slidstud col-md-4">
                                     <img src="{% static 'icon3.png' %}">
-                                    <h3>Smart Mobility<br> & Logistics
+                                    <h3>{{research_center_3}}
                                     </h3>
                                 </div>
                                 <div class="slidstud col-md-4">
                                     <img src="{% static 'icon4.png' %}">
-                                    <h3>Construction and<br> Building Materials</h3>
+                                    <h3>{{research_center_4}}</h3>
                                 </div>
                             </div>
                         </div>
@@ -118,15 +117,15 @@
                             <div class="row">
                                 <div class="slidstud col-md-4">
                                     <img src="{% static 'icon5.png' %}">
-                                    <h3>Intelligent Secure<br> Systems </h3>
+                                    <h3>{{research_center_5}}</h3>
                                 </div>
                                 <div class="slidstud col-md-4">
                                     <img src="{% static 'icon6.png' %}">
-                                    <h3>Intelligent<br> Manufacturing <br> & Robotics </h3>
+                                    <h3>{{research_center_6}}</h3>
                                 </div>
                                 <div class="slidstud col-md-4">
                                     <img src="{% static 'icon7.png' %}">
-                                    <h3>Hydrogen <br>and Energy <br> Storage</h3>
+                                    <h3>{{research_center_7}}</h3>
                                 </div>
                             </div>
                         </div>
@@ -134,15 +133,15 @@
                             <div class="row">
                                 <div class="slidstud col-md-4">
                                     <img src="{% static 'icon8.png' %}">
-                                    <h3>Membranes &<br> Water Security </h3>
+                                    <h3>{{research_center_8}}</h3>
                                 </div>
                                 <div class="slidstud col-md-4">
                                     <img src="{% static 'icon9.png' %}">
-                                    <h3>Integrative <br> Petroleum Research </h3>
+                                    <h3>{{research_center_9}}</h3>
                                 </div>
                                 <div class="slidstud col-md-4">
                                     <img src="{% static 'icon1.png' %}">
-                                    <h3>Finance and <br> Digital Economy
+                                    <h3>{{research_center_10}}
                                     </h3>
                                 </div>
                             </div>
@@ -151,15 +150,15 @@
                             <div class="row">
                                 <div class="slidstud col-md-4">
                                     <img src="{% static 'icon10.png' %}">
-                                    <h3>Refining & Advanced <br>Chemicals </h3>
+                                    <h3>{{research_center_11}}</h3>
                                 </div>
                                 <div class="slidstud col-md-4">
                                     <img src="{% static 'icon11.png' %}">
-                                    <h3>Data Analytics<br> & AI</h3>
+                                    <h3>{{research_center_12}}</h3>
                                 </div>
                                 <div class="slidstud col-md-4">
                                     <img src="{% static 'icon12.png' %}">
-                                    <h3>Advanced Materials
+                                    <h3>{{research_center_13}}
                                     </h3>
                                 </div>
                             </div>
@@ -168,15 +167,15 @@
                             <div class="row">
                                 <div class="slidstud col-md-4">
                                     <img src="{% static 'icon13.png' %}">
-                                    <h3>Environment & <br>Marine Studies </h3>
+                                    <h3>{{research_center_14}} </h3>
                                 </div>
                                 <div class="slidstud col-md-4">
                                     <img src="{% static 'icon14.png' %}">
-                                    <h3>Communication<br> Systems & Sensing</h3>
+                                    <h3>{{research_center_15}}</h3>
                                 </div>
                                 <div class="slidstud col-md-4">
                                     <img src="{% static 'icon15.png' %}">
-                                    <h3>Renewable Energy &<br> Power Systems
+                                    <h3>{{research_center_16}}
                                     </h3>
                                 </div>
                             </div>
@@ -198,13 +197,9 @@
         <div class="container">
             <div class="row marg-b">
                 <div class="col-md-6 batboo">
-                    <h1 data-aos="fade-right" class="mb-3">Postdoctoral Research <br>Fellowship Program</h1>
+                    <h1 data-aos="fade-right" class="mb-3">{{title_1}}</h1>
                     <p data-aos="fade-right">
-                        <strong>Postdoctoral Research Fellowship Program Objectives:</strong><br> • Attract outstanding postdoctoral researchers, specifically Saudi (male or female), in research areas of national priorities and that are aligned with IRCs
-                        themes.
-                        <br> • Maintain excellence in research and boost the quality of conducted research to have an enabling and well-resourced environment for faculty and researchers.<br> • Empower IRCs research activities by attracting talented postdoctoral
-                        fellows.
-                        <br> • Create a competitive environment among centers and faculty to achieve high-impact research
+                        <strong>{{title_1_objective}}</strong><br> {% for i in title_1_text %} {{i}} {% if not forloop.last %} <br>{% endif %} {% endfor %}
                     </p>
                 </div>
                 <div class="col-md-6">
@@ -216,18 +211,16 @@
                     <img data-aos="fade-right" class="img-fluid" src="{% static 'info2.png' %}">
                 </div>
                 <div class="col-md-6 batboor">
-                    <h1 data-aos="fade-left" class="mb-3">KIKX: KFUPM Institute for Knowledge Exchange</h1>
-                    <p data-aos="fade-left"><strong>Program Objectives:</strong><br>• Highlighting the advanced research capabilities of the university and motivating faculty members and researchers to share their achievements with their peers in distinguished research fields,
-                        which will contribute to increasing the prestigious reputation of KFUPM.<br> • Attracting internationally distinguished researchers to attend and interact with KFUPM faculty, researchers and graduate students.<br> • Providing opportunities
-                        for cooperation between university professors and researchers with local and internationally distinguished researchers, which enhances the university's research position and reputation and opens new horizons for graduate students.<br>                        • Take advantage of these distinguished scientific meetings to identify research challenges and paths with great scientific impact.
+                    <h1 data-aos="fade-left" class="mb-3">{{title_2}}</h1>
+                    <p data-aos="fade-left"><strong>{{title_2_objective}}</strong><br>{% for i in title_2_text %} {{i}} {% if not forloop.last %} <br>{% endif %} {% endfor %}
                     </p>
                 </div>
             </div>
             <div class="row marg-b">
                 <div class="col-md-6 batboo">
-                    <h1 data-aos="fade-right" class="mb-3">Graduate Student Conference Travel Program</h1>
-                    <p data-aos="fade-right">This program aims to enable our graduate students to contribute to their research fields by presenting their findings in renowned flagship conferences outside the Kingdom. This will enhance the visibility of the university and give
-                        an opportunity to our graduate students to interact with other researchers in related domain. The award is competitive and will encourage the graduate students to submit their work in their areas of research.
+                    <h1 data-aos="fade-right" class="mb-3">{{title_3}}</h1>
+                    <strong>{{title_3_objective}}</strong>
+                    <p data-aos="fade-right">{% for i in title_3_text %} {{i}} {% if not forloop.last %} <br>{% endif %} {% endfor %}
                     </p>
                 </div>
                 <div class="col-md-6">
@@ -239,15 +232,14 @@
                     <img data-aos="fade-right" class="img-fluid" src="{% static 'pocp.png' %}">
                 </div>
                 <div class="col-md-6 batboor">
-                    <h1 data-aos="fade-left" class="mb-3">Proof-of-Concept Program</h1>
-                    <p data-aos="fade-left"><strong>Program Objectives:</strong><br>• To push innovative research outcomes through the path of commercialization.<br> • To improve the level and quality of technology commercialization in the university through the provision of
-                        funding for early stage development activities.<br> • Help in identifying route to commercialization and securing a route (if one exists).<br> • De-Risk (or perception of risk) the technology to commercial partners or investors.</p>
+                    <h1 data-aos="fade-left" class="mb-3">{{title_4}}</h1>
+                    <p data-aos="fade-left"><strong>{{title_4_objective}}</strong><br>{% for i in title_4_text %} {{i}} {% if not forloop.last %} <br>{% endif %} {% endfor %}</p>
                 </div>
             </div>
             <div class="row marg-b">
                 <div class="col-md-6 batboo">
-                    <h1 data-aos="fade-right" class="mb-3">Prototyping Support for IRCs and Non-Fumded KFUPM Students & Faculity Members</h1>
-                    <p data-aos="fade-right"><strong>Program Objectives:</strong><br> • This program aims to support KFUPM faculty, researchers, graduate and undergraduate students in purchasing direct consumable and supplies for their projects.
+                    <h1 data-aos="fade-right" class="mb-3">{{title_5}}</h1>
+                    <p data-aos="fade-right"><strong>{{title_5_objective}}</strong><br>{% for i in title_5_text %} {{i}} {% if not forloop.last %} <br>{% endif %} {% endfor %}
                     </p>
                 </div>
                 <div class="col-md-6">
@@ -259,8 +251,8 @@
                     <img data-aos="fade-right" class="img-fluid" src="{% static 'csc.png' %}">
                 </div>
                 <div class="col-md-6 batboor">
-                    <h1 data-aos="fade-left" class="mb-3">Centralized Shared Computational Resources for Researchers in the Kingdom</h1>
-                    <p data-aos="fade-left"><strong>Program Objectives:</strong><br> • Accelerate the pace and scale of research by offering a need-basis computational resources for all researchers within KFUPM.<br> • Minimize idle time of computational resources in funded projects.<br>                        • Establish KFUPM as a centralized hub for computationally intensive research within the kingdom.</p>
+                    <h1 data-aos="fade-left" class="mb-3">{{title_6}}</h1>
+                    <p data-aos="fade-left"><strong>{{title_6_objective}}</strong><br>{% for i in title_6_text %} {{i}} {% if not forloop.last %} <br>{% endif %} {% endfor %}</p>
                 </div>
             </div>
         </div>
@@ -299,7 +291,7 @@
                 <div class="col-md-4 navlinksss">
                     <ul class="list-inline mb-5">
                         <li class="list-inline-item">
-                            <a class="" href="contribution_form.html">Contributor Form</a>
+                            <a class="" href="{% url 'contribution-form'%}">Contributor Form</a>
                         </li>
                         <li class="list-inline-item">
                             <a class="" target="_blank" href="{{Links.brochure_pdf}}">Download Brochure</a>
@@ -309,10 +301,10 @@
                 <div class="col-md-4 navlinksss">
                     <ul class="list-inline mb-5">
                         <li class="list-inline-item">
-                            <a class="" href="#!">KFUPM News</a>
+                            <a class="" href="{{Links.KFUPM_News}}">KFUPM News</a>
                         </li>
                         <li class="list-inline-item">
-                            <a class="" href="#!">Alumni Portal</a>
+                            <a class="" href="{{Links.alumni_portal}}">Alumni Portal</a>
                         </li>
                     </ul>
                 </div>
