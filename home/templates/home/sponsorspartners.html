@@ -97,9 +97,10 @@
             <div class="row ml-5">
                 <div class="col-md-12 partn mt-5">
                     <div class="parternsList">
-                        <p>{% for i in all_patners|slice:":13" %} {{i}} {% if not forloop.last %} <br>{% endif %} {% endfor %}</p>
-                        <p>{% for i in all_patners|slice:"13:26" %} {{i}} {% if not forloop.last %} <br>{% endif %} {% endfor %}</p>
-                        <p>{% for i in all_patners|slice:"23:" %} {{i}} {% if not forloop.last %} <br>{% endif %} {% endfor %}</p>
+                        {% for ch in all_patners %}
+                        <p>{% for i in ch %} {{i}} {% if not forloop.last %} <br>{% endif %} {% endfor %}</p>
+
+                        {% endfor %}
                     </div>
                     <!-- <hr> -->
                 </div>

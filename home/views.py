@@ -178,7 +178,13 @@ def summertraning(request):
     except:
         return render(request, 'home/summer_training_programs.html',{})
         
-
+def chunk_array(listt,size):
+    i = 0
+    list_new = list()
+    while i<len(listt):
+        list_new.append(listt[i:i+size])
+        i+=size
+    return list_new
 def partner(request):
     try:
         content_data = PatnerPage.objects.all()
@@ -187,6 +193,9 @@ def partner(request):
         Links = get_link()
         content_data.all_patners = [i.strip() for i in content_data.all_patners.split('\n') if i.strip() != '']
         content_data.__dict__['Links']=Links
+        # print(chunk_array(list(content_data.all_patners),int(len(content_data.all_patners)/3)+1))
+        content_data.all_patners=chunk_array(list(content_data.all_patners),int(len(content_data.all_patners)/3)+1)
+        print(content_data.all_patners)
         return render(request, 'home/sponsorspartners.html', content_data.__dict__)
     except:
         return render(request, 'home/sponsorspartners.html', {})
