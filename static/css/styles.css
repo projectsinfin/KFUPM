@@ -71,19 +71,19 @@
 }
 
 .boxshadoww h5 {
-    background: -webkit-linear-gradient(#007e4b, #007fe3);
+    background: -webkit-linear-gradient(0deg, #007e4b, #007fe3);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .boxshadoww span {
-    background: -webkit-linear-gradient(#007e4b, #007fe3);
+    background: -webkit-linear-gradient(0deg, #007e4b, #007fe3);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .boxshadoww hr {
-    background: -webkit-linear-gradient(#007e4b, #007fe3);
+    background: -webkit-linear-gradient(0deg, #007e4b, #007fe3);
 }
 
 .graph img {
@@ -11213,7 +11213,7 @@ html {
 
 .menu-toggle .fa {
     font-size: 39px;
-    background: -webkit-linear-gradient(#007e4b, #007fe3);
+    background: -webkit-linear-gradient(0deg, #007e4b, #007fe3);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -11378,7 +11378,7 @@ footer.footer .social-link:hover {
 }
 
 .logo img {
-    width: 256px;
+    width: 12em;
 }
 
 .container.topdics {
@@ -11425,7 +11425,7 @@ section.commitmenttext-white {
 
 .commitmenttext-white h2 {
     font-size: 39px;
-    background: -webkit-linear-gradient(#007e4b, #007fe3);
+    background: -webkit-linear-gradient(0deg, #007e4b, #007fe3);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -11443,7 +11443,7 @@ footer.footer {
 
 #about h1 {
     font-size: 39px;
-    background: -webkit-linear-gradient(#007e4b, #007fe3);
+    background: -webkit-linear-gradient(0deg, #007e4b, #007fe3);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -11516,13 +11516,26 @@ footer.footer .social-link {
 
 .newsll input {
     background: #5C5C5C;
-    width: 70%;
+    width: 80%;
     border: 0;
-    padding: 10px 16px;
+    padding: 8px 0px;
     color: #fff;
     font-size: 15px;
     float: left;
     margin-bottom: 30px;
+}
+.newsletterFlex{
+    height: 57px;
+    background: #5C5C5C;
+    width: 80%;
+    border: 0;
+    padding: 10px 16px;
+    margin-bottom: 10px;
+}
+.newsletterFlex i{
+    font-size:35px;
+    color:#fff;
+    float: right;
 }
 
 .newsll input::placeholder {
@@ -11607,7 +11620,8 @@ footer.footer .social-link {
     width: 0;
     height: 0;
     transition: all 0.4s ease 0s;
-    background: #ffffffd9;
+    background: white;
+    opacity: 0.7;
     border-left: 1px solid rgba(255, 255, 255, 0.1);
     top: 45px;
     position: absolute;
@@ -11688,20 +11702,20 @@ ul.sidebar-nav .accordion-body a {
 }
 
 ul.sidebar-nav .accordion-body a:hover {
-    background: -webkit-linear-gradient(#007e4b, #007fe3);
+    background: -webkit-linear-gradient(0deg, #007e4b, #007fe3);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .sidebar-nav li a:hover span {
     text-decoration: none;
-    background: -webkit-linear-gradient(#007e4b, #007fe3);
+    background: -webkit-linear-gradient(0deg, #007e4b, #007fe3);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 span.bg {
-    background: -webkit-linear-gradient(#007e4b, #007fe3);
+    background: -webkit-linear-gradient(0deg, #007e4b, #007fe3);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -11876,7 +11890,7 @@ button.btn.btn-link.btn-block.text-left.collapsed {
 
 .sidebar-nav li .opentab span {
     text-decoration: none;
-    background: -webkit-linear-gradient(#007e4b, #007fe3);
+    background: -webkit-linear-gradient(0deg, #007e4b, #007fe3);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -11926,7 +11940,9 @@ a.collapsed.opentab .bb {
 
 .info span {
     color: #fff;
-    font-weight: 500;
+    font-weight: 700;
+    display: list-item;
+    margin-left: 20px;
 }
 
 .info p {
@@ -12001,7 +12017,7 @@ section.Strategic_partners span label {
     font-size: 26px;
     font-weight: normal;
     padding: 20px 20px;
-    background: -webkit-linear-gradient(#007e4b, #007fe3);
+    background: -webkit-linear-gradient(0deg, #007e4b, #007fe3);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin: 0;
@@ -12072,7 +12088,7 @@ section.Strategic_partners.commitmenttext-white {
 }
 
 .contributor_information .button {
-    background: -webkit-linear-gradient(#007e4b, #007fe3);
+    background: -webkit-linear-gradient(0deg, #007e4b, #007fe3);
     color: #fff;
 }
 
@@ -12123,7 +12139,7 @@ section.Strategic_partners.commitmenttext-white {
 
 .kknumbe {
     font-size: 39px;
-    background: -webkit-linear-gradient(#007e4b, #007fe3);
+    background: -webkit-linear-gradient(0deg, #007e4b, #007fe3);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -12179,6 +12195,10 @@ footer.footer .social-link.li:hover {
 footer.footer .social-link.yu:hover {
     background-color: #FF0000;
     border-color: #FF0000;
+}
+footer.footer .social-link.in:hover {
+    background-color: purple;
+    border-color: purple;
 }
 
 .navlinksss a:hover {
@@ -12278,7 +12298,8 @@ footer.footer .social-link.yu:hover {
         height: 100px;
     }
     .logo {
-        top: 0;
+        top: 20px;
+        right: 0;
     }
     .active ul.sidebar-nav {
         left: 0;
