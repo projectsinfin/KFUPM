@@ -11841,7 +11841,9 @@ button.btn.btn-link.btn-block.text-left.collapsed {
     background-repeat: no-repeat;
     background-position: right;
 }
-
+.opentab{
+    cursor: pointer;
+}
 .opentab span img {
     margin-left: 9px;
     width: 15px;
