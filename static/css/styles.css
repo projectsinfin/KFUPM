@@ -12062,7 +12062,9 @@ section.Strategic_partners h2 {
 section.Strategic_partners.commitmenttext-white {
     padding: 0;
 }
-
+.contributor_information , .contributor_information .container{
+    padding: 0;
+}
 .contributor_information label {
     font-weight: 600;
     font-size: 20px;
@@ -12070,10 +12072,52 @@ section.Strategic_partners.commitmenttext-white {
 }
 
 .contributor_information input {
-    margin-bottom: 20px;
-    border: 2px solid;
-    border-radius: 0;
-    padding: 21px 20px;
+    border: none;
+}
+.contributor_information .row {
+    margin: 20px 0;
+}
+.contributor_information .textData {
+    max-width: 100%;
+    min-width: max-content;
+}
+.contributor_information .leftTextData {
+    text-align: left;
+}
+.contributor_information .rightTextData {
+    text-align: right;
+}
+.contributor_information input[type=checkbox], input[type=radio]{
+    width: 45px;
+    height: 45px;
+}
+.contributor_information .inputFields{
+    display: flex;
+    border: 1px solid gray;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    height: 60px;
+}
+.contributor_information .inputFields .counts {
+    font-weight: 700;
+    margin-left: 5px;
+    background:-webkit-linear-gradient(0deg, #007e4b, #007fe3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.contributor_information .grColorBorder {
+    background: linear-gradient(#fff, #fff) padding-box, linear-gradient(45deg, #267e4e, #2f7fe1) border-box;
+    border: 2px solid transparent;
+    border-radius: 10px;
+}
+
+.contributor_information .grColor {
+    background:-webkit-linear-gradient(0deg, #007e4b, #007fe3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .contributor_information textarea {

@@ -69,91 +69,376 @@
             <div class="row marg-b formpage">
 
                 <form class="contributor_information">
-                    <div class="col-md-6">
-                        <label>Contributor Information</label>
-                        <input name="name" id="name" type="text" placeholder="name" value="" class="form-control col-md-12">
-                        <input name="idNumber" id="idNumber" type="text" placeholder="KFUPM ID Number" value="" class="form-control col-md-12">
-                        <input name="Address" id="Address" type="text" placeholder="Address" value="" class="form-control col-md-12">
-                        <input name="Street" id="Street" type="text" placeholder="Street" value="" class="form-control col-md-12">
-                        <input name="City" id="City" type="text" placeholder="City" value="" class="form-control col-md-12">
-                        <input name="Mobile" id="Mobile" type="text" placeholder="Mobile" value="" class="form-control col-md-12">
-                        <input name="mail" id="mail" type="text" placeholder="E-mail" value="" class="form-control col-md-12">
-                        <label class="mt-5">I would like to contribute<br>
-                        to KFUPM Fund with the amount of</label><br>
+                    <div class="container">
                         <div class="row">
-                            <div class="col-md-6">
-                                <div class="boxcheck"><label for="dewey">5,000 SR<input type="radio" id="dewey" name="drone" value="dewey"></label></div>
-                                <div class="boxcheck"><label for="dewey1">10,000 SR<input type="radio" id="dewey1" name="drone" value="dewey"></label></div>
-                                <div class="boxcheck"><label for="dewey2">15,000 SR<input type="radio" id="dewey2" name="drone" value="dewey"></label></div>
-                                <div class="boxcheck"><label for="dewey3">20,000 SR<input type="radio" id="dewey3" name="drone" value="dewey"></label></div>
+                            <div class="col">
+                                <div class="inputFields">
+                                    <div class="textData leftTextData">KFUPM ID Number</div>
+                                    <input type="text" class="form-control" id="idNumber" name="idNumber" placeholder="........................................">
+                                    <div class="textData rightTextData">الجامعي الرقم</div>
+                                </div>
                             </div>
-                            <div class="col-md-6">
-                                <div class="boxcheck"><label for="dewey4">25,000 SR<input type="radio" id="dewe4" name="drone" value="dewey"></label></div>
-                                <div class="boxcheck"><label for="dewey5">30,000 SR<input type="radio" id="dewey5" name="drone" value="dewey"></label></div>
-                                <div class="boxcheck"><label for="dewey6">50,000 SR<input type="radio" id="dewey6" name="drone" value="dewey"></label></div>
+                            <div class="col">
+                                <div class="inputFields">
+                                    <div class="textData leftTextData">Name</div>
+                                    <input type="text" class="form-control" id="name" name="name" placeholder="....................................................................................">
+                                    <div class="textData rightTextData">الاسم</div>
+                                </div>
                             </div>
                         </div>
+                        
                         <div class="row">
-                            <div class="col-md-6">
-                                <div class="boxcheck"><label for="dewey7">5,000 SR<input type="radio" id="dewey7" name="drone" value="dewey"></label></div>
+                            <div class="col">
+                                <div class="inputFields">
+                                    <div class="textData leftTextData">City</div>
+                                    <input type="city" id="city" name="city" class="form-control" placeholder="........................................">
+                                    <div class="textData rightTextData">المدينة</div>
+                                </div>
                             </div>
-                            <div class="col-md-6">
-                                <input name="amount" id="amount" type="text" placeholder="The amount" value="" class="form-control col-md-12">
+                            <div class="col">
+                                <div class="inputFields">
+                                    <div class="textData leftTextData">Street</div>
+                                    <input type="street" id="street" name="street" class="form-control" placeholder="........................................">
+                                    <div class="textData rightTextData">الحي</div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="inputFields">
+                                    <div class="textData leftTextData">Address</div>
+                                    <input type="address" id="address" name="address" class="form-control" placeholder="........................................">
+                                    <div class="textData rightTextData">العنوان</div>
+                                </div>
                             </div>
                         </div>
-                        <label class="mt-5">Duration of amount</label><br>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="boxcheck"><label for="dewey">One time<input type="radio" id="dewey" name="drone" value="dewey"></label></div>
-                                <div class="boxcheck"><label for="dewey1">Annually<input type="radio" id="dewey1" name="drone" value="dewey"></label></div>
-                                <div class="boxcheck"><label for="dewey2">Other<input type="radio" id="dewey2" name="drone" value="dewey"></label></div>
-                            </div>
-                        </div>
-                        <label class="mt-5">The  purpose</label><br>
-                        <textarea class="col-md-12 form-control"></textarea>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="boxcheck"><label for="dewey">No specific purpose<input type="radio" id="dewey" name="drone" value="dewey"></label></div>
-                            </div>
-                        </div>
-                        <label class="mt-5">Would you like to publish<br>
-                                    your name and the contribution<br>
-                                    amount in KFUPM publications?</label><br>
-                        <input type="radio" id="age1" name="age" value="30">
-                        <strong for="age1">Yes</strong><br>
-                        <input type="radio" id="age2" name="age" value="60">
-                        <strong for="age2">No</strong><br>
-                        <div class=" mb-5"></div>
 
-                        <input name="Signature" id="Signature" type="text" placeholder="Signature" value="" class="form-control col-md-12">
-                        <input name="dd" id="dd" type="text" placeholder="Date   /    /   " value="" class="form-control col-md-12">
+                        <div class="row">
+                            <div class="col">
+                                <div class="inputFields">
+                                    <div class="textData leftTextData">E-mail</div>
+                                    <input type="email" id="email" name="email" class="form-control" placeholder="....................................................................">
+                                    <div class="textData rightTextData">البريد الإلكتروني</div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="inputFields">
+                                    <div class="textData leftTextData">Mobile</div>
+                                    <input type="number" id="mobileNumber" name="mobileNumber" class="form-control" placeholder="..........................................................................................................................................................">
+                                    <div class="textData rightTextData">الجوال</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col leftTextData">
+                                I would like to contribute to KFUPM Fund with the amount of
+                            </div>
+                            <div class="col" style="display: flex;justify-content:space-around">
+                                <div class="inputFields" style="height: 45px;">
+                                    bookmark
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="bookmark" name="bookmark">
+                                </div>
+
+                                <div class="inputFields" style="height: 45px;">
+                                    إشارة ضع
+                                </div>
+                            </div>
+                            <div class="col rightTextData">
+                                في دعـــــــــــــــــــــــم الصنــــــــــــــــــــدوق بمبلغ
+                            </div>
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col">
+                                <div class="inputFields">
+                                    <input type="radio" name="count" value="15000">
+                                    <div class="textData rightTextData" style="display: flex;">
+                                        SR | ريال
+                                        <div class="counts">15,000</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="inputFields">
+                                    <input type="radio" name="count" value="10000">
+                                    <div class="textData rightTextData" style="display: flex;">
+                                        SR | ريال
+                                        <div class="counts">10,000</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="inputFields">
+                                    <input type="radio" name="count" value="5000">
+                                    <div class="textData rightTextData" style="display: flex;">
+                                        SR | ريال
+                                        <div class="counts">5,000</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col">
+                                <div class="inputFields">
+                                    <input type="radio" name="count" value="30000">
+                                    <div class="textData rightTextData" style="display: flex;">
+                                        SR | ريال
+                                        <div class="counts">35,000</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="inputFields">
+                                    <input type="radio" name="count" value="25000">
+                                    <div class="textData rightTextData" style="display: flex;">
+                                        SR | ريال
+                                        <div class="counts">25,000</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="inputFields">
+                                    <input type="radio" name="count" value="20000">
+                                    <div class="textData rightTextData" style="display: flex;">
+                                        SR | ريال
+                                        <div class="counts">20,000</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col">
+                                <div class="inputFields">
+                                    <div>
+                                        <input type="radio" name="count" value="other">
+                                    </div>
+                                    <div style="margin-left:10px;max-width: max-content;min-width: max-content;">
+                                        SR | ريال
+                                    </div>
+                                    <input type="number" class="form-control" placeholder=".............................................................................................................................................................">
+
+                                    <div class="textData rightTextData" style="display: flex;">
+                                        Other | مبلغ آخر
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="inputFields">
+                                    <input type="radio" name="count" value="50000">
+                                    <div class="textData rightTextData" style="display: flex;">
+                                        SR | ريال
+                                        <div class="counts">50,000</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col">
+                                <div class="inputFields">
+                                    <input type="radio" name="paymentCircle" value="Other">
+                                    <div class="textData rightTextData">
+                                       Other | غير ذلك
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="inputFields">
+                                    <input type="radio" name="paymentCircle" value="One Time">
+                                    <div class="textData rightTextData">
+                                       One Time | مرة واحدة
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="inputFields">
+                                    <input type="radio" name="paymentCircle" value="Annually">
+                                    <div class="textData rightTextData">
+                                        Annually | سنـــــــــــــوياً
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col">
+                                <div class="inputFields">
+                                    <input type="number" name="paymentCircle" class="form-control" placeholder=".............................................................................................................................................................">
+                                    <div class="textData rightTextData" style="min-width: 59%;line-height: 13px;text-align: left;">
+                                        محدد الغرض | تحديد مجال الدعم أو اسم البرنامج
+                                        <br>
+                                        <span style="font-size: 0.6em;">
+                                            For a specific purpose | identify the purpose of the donation or the program you would like to support
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="inputFields">
+                                    <input type="radio" name="paymentCircle" value="No specific purpose">
+                                    <div class="textData rightTextData">
+                                        غير محدد الغرض
+                                        <br>
+                                        No specific purpose
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col leftTextData" style="font-size: 0.8em;">
+                                Would you like to publish your name and the contribution amount in KFUPM publications?
+                            </div>
+                            <div class="col" style="display: flex;justify-content:space-around">
+                                <div class="inputFields">
+                                    <input type="radio" name="yesORno" value="no">
+                                    <div class="textData rightTextData" style="margin-left: 10px;">
+                                        لا/No
+                                    </div>
+                                </div>
+                                <div class="inputFields">
+                                    <input type="radio" name="yesORno" value="yes">
+                                    <div class="textData rightTextData" style="margin-left: 10px;">
+                                        نعــم/Yes
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col rightTextData" style="font-size: 0.8em;">
+                                هـــــــــــل ترغب في نشــــــــــــــر اسمك
+                                وقيمة مساهمتك في مطبوعات الصندوق
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col leftTextData" style="display: flex;align-items: center;">
+                                <input type="Date" id="date" name="date" class="form-control" placeholder=".................................................................................................................................................">
+                                <div style="max-width: max-content;min-width: max-content;">
+                                    Date | التــــــــاريخ
+                                </div>
+                            </div>
+                            
+                            <div class="col rightTextData" style="display: flex;align-items: center">
+                                <input type="text" id="signature" name="signature" class="form-control" placeholder="..............................................................................................................">
+                                <div style="max-width: max-content;min-width: max-content;">
+                                    Signature | التوقيـــع
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col">
+                                <div class="backgr col-md-12" style="margin:0;border-radius: 10px;display: flex;font-size: 0.8em;justify-content:space-between;padding: 20px;">
+                                    <div class="leftTextData">
+                                        You can transfer your contribution directly<br>
+                                        to KFUPM accounts in The Saudi National Bank
+                                    </div>
+
+                                    <div class="rightTextData">
+                                        إيداع مساهمتك عن طريق الإيداع المباشر<br>
+                                        في حساب صندوق جامعة الملك فهد للبترول والمعادن في البنك الأهلي السعودي
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col leftTextData" style="display: flex;align-items: center;">
+                                <div class="inputFields grColorBorder" style="width: 100%;">
+                                    <input type="text" id="ibanNo" name="ibanNo" class="form-control">
+                                    <div style="max-width: max-content;min-width: max-content;">
+                                        IBAN Number | رقم الآيبان
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-3 rightTextData" style="display: flex;align-items: center">
+                                <div class="inputFields">
+                                    <input type="text" id="bank" name="bank" class="form-control">
+                                    <div style="max-width: max-content;min-width: max-content;">
+                                        Bank | البنك
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col leftTextData" style="display: flex;align-items: center;">
+                                <div class="inputFields grColorBorder" style="width: 100%;">
+                                    <input type="text" id="bankNo" name="bankNo" class="form-control">
+                                    <div style="max-width: max-content;min-width: max-content;">
+                                        SA61-1000-0016-8491-4900-0102
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-3 rightTextData" style="display: flex;align-items: center">
+                                <div class="inputFields">
+                                    <input type="text" id="bankName" name="bankName" class="form-control">
+                                    <div style="max-width: max-content;min-width: max-content;font-size: 0.8em;">
+                                        البنــك الأهلي السعــــودي
+                                        <br>The Saudi National Bank
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col" style="text-align: center;">
+                                Or by sending a check in the name of (صندوق دعم البحوث والبرامج التعليمية) أو بإرسال شيك بإسم
+                                <br>To the below address التالي العنوان إلى
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col">
+                                <div class="inputFields grColorBorder" style="justify-content: center;text-align: center;font-size: 0.8em;">
+                                    32161 صندوق جامعة الملك فهد للبترول والمعادن | جامعة الملك فهد للبترول والمعادن | مبنى 16 | غرفة 149 | ص.ب 36 الظهران
+                                    <br>Building 16, Room 149 – PO Box. 36 Dhahran 31261
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col" style="display: flex;font-size: 0.7em;justify-content:space-between">
+                                <div class="grColor">
+                                    Kindly notify us by email when you complete your contributions
+                                </div>
+                                <div>
+                                    fundoffice@kfupm.edu.sa
+                                </div>
+                                <div class="grColor">
+                                    .....................................
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row" style="font-size: 0.8em;">
+                            <div class="col leftTextData" style="font-size: 0.8em;">
+                                We value your privacy. All your personal details are confidential
+                                <br>& private and we only use your details to notify you of the various
+                                <br>activities & events happening at the university.
+                            </div>
+                            <div class="col rightTextData">
+                                نضمن سرية هذه المعلومات وخصوصيتها وسوف تستخدم فقط
+                                <br>لإبقائكم على إطلاع على فعاليات وأنشطـة الجامعـة المختلفـة
+                            </div>
+                        </div>
+
                     </div>
-                    <div class="col-md-12">
+                    
+                    <!-- <div class="col-md-12">
                         <div class="backgr col-md-12">
                             <span>You can transfer your contribution directly<br>
                             to KFUPM accounts in one of the following banks</span>
                         </div>
-                    </div>
-                    <div class="col-md-6">
-                        <input name="Bank" id="Bank" type="text" placeholder="Bank name" value="" class="form-control col-md-12">
-                        <input name="IBAN" id="IBAN" type="text" placeholder="IBAN Number" value="" class="form-control col-md-12">
-                        <button class="btn button mt-5 mb-4">The Saudi National Bank</button>
-                        <input name="idtes" id="idtes" type="text" placeholder="SA61-1000-0016-8491-4900-0102" value="" class="form-control col-md-12">
-                    </div>
-                    <div class="col-md-12">
-                        <label class="mt-5 mb-0">Or by sending a check in the name of (Support Fund for Research & Educational Programs).</label>
-                        <hr class="wdths">
-                        <label class="mt-5">King Fahd University Petroleum and Petroleum Fund | King Fahd University of Petroleum
-                        and Petroleum | Building 16 | Room 149 | PO Box 36 Dhahran 31261</label>
-                        <label><span class="bg">Kindly notify us by emailwhen you complete your donation </span> fundoffice@ kfupm.edu.sa</label>
-                    </div>
-                    <div class="col-md-6">
-                        <button class="btn button mt-5 mb-5">Submit Contribution</button>
-                    </div>
-                    <hr class="bgfulls">
-                    <div class="col-md-6">
-                        <p>We value your privacy. All your personal details are confidential & private and we only use your details to notify you of the various activities & events happening at the university</p>
-                    </div>
+                    </div> -->
+                    
                 </form>
             </div>
             <div class="col-md-6">
