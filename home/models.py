@@ -4,14 +4,15 @@ from datetime import date
 from phonenumber_field.modelfields import PhoneNumberField
 # Create your models here.
 class Link(models.Model):
-    facebook_url = models.URLField()
-    twitter_url = models.URLField()
-    linkedin_url = models.URLField()
-    youTube_url = models.URLField()
-    youTube_video_url = models.URLField()
-    alumni_portal = models.URLField()
-    KFUPM_News = models.URLField()
-    brochure_pdf = models.FileField(upload_to='static/')
+    facebook_url = models.URLField(blank = True)
+    twitter_url = models.URLField(blank = True)
+    linkedin_url = models.URLField(blank = True)
+    instagram_url = models.URLField(blank = True)
+    youTube_url = models.URLField(blank = True)
+    youTube_video_url = models.URLField(blank = True)
+    alumni_portal = models.URLField(blank = True)
+    KFUPM_News = models.URLField(blank = True)
+    brochure_pdf = models.FileField(blank = True,upload_to='static/')
     
 class HomePage(models.Model):
     title_1 = models.TextField()
