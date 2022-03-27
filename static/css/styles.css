@@ -11396,12 +11396,12 @@ section#numbers {
 
 .kfumnumber span {
     font-size: 40px;
-    font-weight: 300;
+    font-weight: 500;
 }
 
 .kfumnumber h5 {
     font-size: 24px;
-    font-weight: 500;
+    /* font-weight: 500; */
 }
 
 .kfumnumber hr {
@@ -11524,7 +11524,8 @@ footer.footer .social-link {
     float: left;
     margin-bottom: 30px;
 }
-.newsletterFlex{
+
+.newsletterFlex {
     height: 57px;
     background: #5C5C5C;
     width: 80%;
@@ -11532,9 +11533,10 @@ footer.footer .social-link {
     padding: 10px 16px;
     margin-bottom: 10px;
 }
-.newsletterFlex i{
-    font-size:35px;
-    color:#fff;
+
+.newsletterFlex i {
+    font-size: 35px;
+    color: #fff;
     float: right;
 }
 
@@ -11605,7 +11607,7 @@ footer.footer .social-link {
     padding: 75px 35px;
 }
 
-.parternsList{
+.parternsList {
     display: flex;
     justify-content: space-between;
 }
@@ -11613,6 +11615,7 @@ footer.footer .social-link {
 .sidebar-nav li.sidebar-nav-item a {
     font-size: 1.3em;
 }
+
 .sidebar-nav {
     position: absolute;
     z-index: 2;
@@ -11841,9 +11844,11 @@ button.btn.btn-link.btn-block.text-left.collapsed {
     background-repeat: no-repeat;
     background-position: right;
 }
-.opentab{
+
+.opentab {
     cursor: pointer;
 }
+
 .opentab span img {
     margin-left: 9px;
     width: 15px;
@@ -12062,9 +12067,12 @@ section.Strategic_partners h2 {
 section.Strategic_partners.commitmenttext-white {
     padding: 0;
 }
-.contributor_information , .contributor_information .container{
+
+.contributor_information,
+.contributor_information .container {
     padding: 0;
 }
+
 .contributor_information label {
     font-weight: 600;
     font-size: 20px;
@@ -12074,24 +12082,31 @@ section.Strategic_partners.commitmenttext-white {
 .contributor_information input {
     border: none;
 }
+
 .contributor_information .row {
     margin: 20px 0;
 }
+
 .contributor_information .textData {
     max-width: 100%;
     min-width: max-content;
 }
+
 .contributor_information .leftTextData {
     text-align: left;
 }
+
 .contributor_information .rightTextData {
     text-align: right;
 }
-.contributor_information input[type=checkbox], input[type=radio]{
+
+.contributor_information input[type=checkbox],
+input[type=radio] {
     width: 45px;
     height: 45px;
 }
-.contributor_information .inputFields{
+
+.contributor_information .inputFields {
     display: flex;
     border: 1px solid gray;
     border-radius: 10px;
@@ -12100,10 +12115,11 @@ section.Strategic_partners.commitmenttext-white {
     padding: 0 10px;
     height: 60px;
 }
+
 .contributor_information .inputFields .counts {
     font-weight: 700;
     margin-left: 5px;
-    background:-webkit-linear-gradient(0deg, #007e4b, #007fe3);
+    background: -webkit-linear-gradient(0deg, #007e4b, #007fe3);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -12115,7 +12131,7 @@ section.Strategic_partners.commitmenttext-white {
 }
 
 .contributor_information .grColor {
-    background:-webkit-linear-gradient(0deg, #007e4b, #007fe3);
+    background: -webkit-linear-gradient(0deg, #007e4b, #007fe3);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -12242,6 +12258,7 @@ footer.footer .social-link.yu:hover {
     background-color: #FF0000;
     border-color: #FF0000;
 }
+
 footer.footer .social-link.in:hover {
     background-color: purple;
     border-color: purple;
