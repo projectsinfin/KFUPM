@@ -11878,16 +11878,19 @@ button.btn.btn-link.btn-block.text-left.collapsed {
 .p-t80 {
     padding-top: 80px !important;
 }
-.nodeColorChange{
-    -webkit-text-fill-color: black !important;
+
+.nodeColorChange {
+    -webkit-text-fill-color: red !important;
 }
-.fromHeaderText{
+
+.fromHeaderText {
     width: 80%;
     font-size: 0.8em;
     text-align: center;
     margin: 0 auto;
     padding: 40px;
 }
+
 .ocbg {
     background: url("../ocbg.png");
     background-repeat: no-repeat;
@@ -11936,14 +11939,17 @@ a.collapsed.opentab .bb {
     color: #fff;
     font-weight: bold;
 }
-.edutext:hover{
+
+.edutext:hover {
     transform: scale(1.05);
     transition: .8s ease;
     filter: drop-shadow(1px 2px 4px gray);
 }
-.edutext:hover img{
+
+.edutext:hover img {
     filter: brightness(0.25);
 }
+
 .edutext {
     position: relative;
     text-align: center;
