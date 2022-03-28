@@ -73,10 +73,12 @@
                 <div class="col-md-12">
                     <img class="img-fluid" data-aos="fade-left" src="{% static 'goc.png' %}">
                 </div>
-                <div class="col-md-12 batboo">
-                    <p class="ocbg">
-                        {% for i in page_content %} {{i}} {% if not forloop.last %} <br><br>{% endif %} {% endfor %}
-                    </p>
+                <div class="col-md-12">
+                    <div class="ocbg">
+                        <span>
+                            {% for i in page_content %} {{i}} {% if not forloop.last %} <br><br>{% endif %} {% endfor %}
+                        </span>
+                    </div>
                 </div>
             </div>
 

@@ -231,7 +231,7 @@
             </div>
             <div class="row marg-b">
                 <div class="col-md-6 batboo">
-                    <h1 data-aos="fade-right" class="mb-3">{{title_5}}</h1>
+                    <h1 data-aos="fade-right" id="nonFunded" class="mb-3">{{title_5}}</h1>
                     <p data-aos="fade-right"><strong>{{title_5_objective}}</strong><br>{% for i in title_5_text %} {{i}} {% if not forloop.last %} <br>{% endif %} {% endfor %}
                     </p>
                 </div>
@@ -319,6 +319,7 @@
     <script src="{% static 'js/scripts.js' %}"></script>
     <script>
         AOS.init();
+        document.getElementById("nonFunded").innerHTML = document.getElementById("nonFunded").innerHTML.replace(/Non-Funded/g, "<span class='nodeColorChange'>Non-Funded</span>");
     </script>
 </body>
 
