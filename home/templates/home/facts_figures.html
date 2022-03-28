@@ -23,7 +23,7 @@
         <nav id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li class="sidebar-nav-item">
-                    <a class="collapsed opentab" type="text" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                    <a class="collapsed opentab" id="navOne" onclick="closeNavBar('one')" type="text" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
                         <span>KFUPM Fund<img class="aa" src="{% static 'ccl.png' %}"> <img class="bb" src="{% static 'bbc.png' %}"></span>
                     </a>
                     <ul id="flush-collapseOne" class="collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
@@ -34,7 +34,7 @@
                     </ul>
                 </li>
                 <li class="sidebar-nav-item">
-                    <a class="collapsed opentab" type="text" data-bs-toggle="collapse" data-bs-target="#flush-collapseOnet" aria-expanded="false" aria-controls="flush-collapseOnet">
+                    <a class="collapsed opentab" id="navTwo" onclick="closeNavBar('two')" type="text" data-bs-toggle="collapse" data-bs-target="#flush-collapseOnet" aria-expanded="false" aria-controls="flush-collapseOnet">
                         <span>Distinguished Programs<img class="aa" src="{% static 'ccl.png' %}"> <img class="bb" src="{% static 'bbc.png' %}"></span>
                     </a>
                     <ul id="flush-collapseOnet" class="collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
@@ -45,7 +45,7 @@
                 </li>
                 <li class="sidebar-nav-item"><a href="{% url 'patners'%}">Our Partners</a></li>
                 <li class="sidebar-nav-item">
-                    <a class="collapsed opentab" type="text" data-bs-toggle="collapse" data-bs-target="#flush-collapseOnetn" aria-expanded="false" aria-controls="flush-collapseOnetn">
+                    <a class="collapsed opentab" id="navThree" onclick="closeNavBar('three')" type="text" data-bs-toggle="collapse" data-bs-target="#flush-collapseOnetn" aria-expanded="false" aria-controls="flush-collapseOnetn">
                         <span>How Can I Contribute?<img class="aa" src="{% static 'ccl.png' %}"> <img class="bb" src="{% static 'bbc.png' %}"></span> </a>
                     <ul id="flush-collapseOnetn" class="collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                         <li class="accordion-body"> <a href="{% url 'contribution-form'%}">Contribution Form</a></li>
@@ -215,6 +215,38 @@
     <script src="{% static 'js/scripts.js' %}"></script>
     <script>
         AOS.init();
+    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>
+        function closeNavBar(path) {
+            if(path=='one'){
+                document.getElementById("navTwo").setAttribute("aria-expanded", "false");
+                document.getElementById("navTwo").classList.add("collapsed");
+                document.getElementById("flush-collapseOnet").classList.remove("show");
+
+                document.getElementById("navThree").setAttribute("aria-expanded", "false");
+                document.getElementById("navThree").classList.add("collapsed"); 
+                document.getElementById("flush-collapseOnetn").classList.remove("show");
+            }
+            else if(path=='two'){
+                console.log("two")
+                document.getElementById("navOne").setAttribute("aria-expanded", "false");
+                document.getElementById("navOne").classList.add("collapsed");
+                document.getElementById("flush-collapseOne").classList.remove("show");
+
+                document.getElementById("navThree").setAttribute("aria-expanded", "false");
+                document.getElementById("navThree").classList.add("collapsed"); 
+                document.getElementById("flush-collapseOnetn").classList.remove("show");
+            }else{
+                document.getElementById("navTwo").setAttribute("aria-expanded", "false");
+                document.getElementById("flush-collapseOnet").classList.remove("show");
+                document.getElementById("navTwo").classList.add("collapsed");
+
+                document.getElementById("navOne").setAttribute("aria-expanded", "false");
+                document.getElementById("navOne").classList.add("collapsed");
+                document.getElementById("flush-collapseOne").classList.remove("show");
+            }
+        }
     </script>
 </body>
 

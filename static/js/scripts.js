@@ -23,16 +23,16 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
     function _toggleMenuIcon() {
-        // const menuToggleBars = document.body.querySelector('.menu-toggle > .fa-bars');
-        // const menuToggleTimes = document.body.querySelector('.menu-toggle > .fa-times');
-        // if (menuToggleBars) {
-        //     menuToggleBars.classList.remove('fa-bars');
-        //     menuToggleBars.classList.add('fa-times');
-        // }
-        // if (menuToggleTimes) {
-        //     menuToggleTimes.classList.remove('fa-times');
-        //     menuToggleTimes.classList.add('fa-bars');
-        // }
+        const menuToggleBars = document.body.querySelector('.menu-toggle > .fa-bars');
+        const menuToggleTimes = document.body.querySelector('.menu-toggle > .fa-list-ul');
+        if (menuToggleBars) {
+            menuToggleBars.classList.remove('fa-bars');
+            menuToggleBars.classList.add('fa-list-ul');
+        }
+        if (menuToggleTimes) {
+            menuToggleTimes.classList.remove('fa-list-ul');
+            menuToggleTimes.classList.add('fa-bars');
+        }
     }
 
     // Scroll to top button appear

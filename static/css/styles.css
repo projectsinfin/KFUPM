@@ -11890,7 +11890,9 @@ button.btn.btn-link.btn-block.text-left.collapsed {
     margin: 0 auto;
     padding: 40px;
 }
-
+.submitButtonForm{
+    background: -webkit-linear-gradient(0deg, #007e4b, #007fe3);
+}
 .ocbg {
     background: url("../ocbg.png");
     background-repeat: no-repeat;
@@ -12336,7 +12338,8 @@ footer.footer .social-link.in:hover {
         margin: 0 auto;
     }
     .slidstud {
-        padding: 20px 0;
+        padding: 60px 0;
+        background-size: 350px !important;
     }
     #about .col-md-6 {
         align-items: center;
@@ -12445,6 +12448,7 @@ footer.footer .social-link.in:hover {
         overflow-x: hidden;
     }
     .slidstud {
+        padding: 50px;
         background-size: contain;
     }
     .slidstud h3 {
