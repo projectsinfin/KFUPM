@@ -77,21 +77,29 @@
             <div class="row  marg-b">
                 <div class="col-md-6 edutext ">
                     <a href="{% url 'undergraduate' %}"><img src="{% static 'g1.png' %}">
-                        <span>{{Progam_title_1}}</span></a>
+                        <span>{{Progam_title_1}}</span>
+                        <div class="subtextOnHover">{{Animation_text}}</div>
+                    </a>
                 </div>
                 <div class="col-md-6 edutext ">
                     <a href="{% url 'faculty' %}"><img src="{% static 'g2.png' %}">
-                        <span>{{Progam_title_2}}</span></a>
+                        <span>{{Progam_title_2}}</span>
+                        <div class="subtextOnHover">{{Animation_text}}</div>
+                    </a>
                 </div>
             </div>
             <div class="row  marg-b mt-5">
                 <div class="col-md-6 edutext ">
                     <a href="{% url 'summertraning' %}"> <img src="{% static 'g3.png' %}">
-                        <span>{{Progam_title_3}}</span></a>
+                        <span>{{Progam_title_3}}</span>
+                        <div class="subtextOnHover">{{Animation_text}}</div>
+                    </a>
                 </div>
                 <div class="col-md-6 edutext ">
                     <a href="{% url 'graduate' %}"> <img src="{% static 'g4.png' %}">
-                        <span>{{Progam_title_4}}</span></a>
+                        <span>{{Progam_title_4}}</span>
+                        <div class="subtextOnHover">{{Animation_text}}</div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -131,6 +139,7 @@
                             <input type="email" name="newsletter" id="newsletter" value="" placeholder="Email address">
                             <i style="cursor: pointer;" onclick="submitNewsletter()" class="fa fa-envelope-o"></i>
                         </div>
+                        <div class="invalidEmail">please enter a valid email address</div>
                     </div>
                 </div>
                 <div class="col-md-4 navlinksss">
