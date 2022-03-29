@@ -228,7 +228,8 @@ def contribution_online(request):
     return render(request, 'home/online_contribution.html', {})
 
 def contribution(request):
-    return render(request, 'home/contribution_form.html', {})
+    Links = get_link()
+    return render(request, 'home/contribution_form.html', {'Links':Links})
 
 def faq(request):
     try:
@@ -264,5 +265,25 @@ def serve_pdf(request):
     return FileResponse(open(filepath, 'rb'), content_type='application/pdf')
 
 def from_data(request):
-    print(request.POST)
-    return JsonResponse({'data':[]})
+    form = (request.POST)
+    print(dict(form))
+    print(form.keys())
+    form_data = FormData()
+    form_data.kfupm_id_number = form.get('idNumber','').upper() 
+    form_data.name = form.get('name','').upper() 
+    form_data.city = form.get('city','').upper() 
+    form_data.street = form.get('street','').upper() 
+    form_data.address = form.get('address','').upper() 
+    form_data.e_mail = form.get('email','').upper() 
+    form_data.mobile = form.get('mobileNumber','').upper() 
+    form_data.bookmark = form.get('bookmark','').upper() 
+    form_data.amount = form.get('count','').upper() 
+    form_data.payment_circle = form.get('paymentCircle','').upper() 
+    form_data.purpose = form.get('purpose_reason','').upper() 
+    form_data.publish_name = form.get('yesORno','').upper() 
+    form_data.date = form.get('date','').upper() 
+    form_data.signature = form.get('signature','').upper() 
+    form_data.save()
+    
+    Links = get_link()
+    return render(request, 'home/contribution_form.html', {'Links':Links})

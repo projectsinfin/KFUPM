@@ -68,11 +68,11 @@
         <div class="container">
             <div class="row marg-b formpage">
 
-                <form class="contributor_information" action="/action_page.php" method="post">
+                <form class="contributor_information" action="{% url 'submit-form'%}" method="post">
+                    {% csrf_token %}
                     <div class="fromHeaderText">
                         Thank you for considering to contribute to the KFUPM Fund. Your contribution goes a long way in assisting the new generation to excel through education that makes an impact.
-                        <br>
-                        تشكــــــر الجامعــــــــة لكم مساهمتكم في دعم الصندوق
+                        <br> تشكــــــر الجامعــــــــة لكم مساهمتكم في دعم الصندوق
                         <br>نأمل التكــــــــــرم بتعبئـــــــــــة النموذج التالي
                     </div>
                     <div class="container">
@@ -92,7 +92,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="row">
                             <div class="col">
                                 <div class="inputFields">
@@ -249,7 +249,7 @@
                                 <div class="inputFields">
                                     <input type="radio" name="paymentCircle" value="Other">
                                     <div class="textData rightTextData">
-                                       Other | غير ذلك
+                                        Other | غير ذلك
                                     </div>
                                 </div>
                             </div>
@@ -257,7 +257,7 @@
                                 <div class="inputFields">
                                     <input type="radio" name="paymentCircle" value="One Time">
                                     <div class="textData rightTextData">
-                                       One Time | مرة واحدة
+                                        One Time | مرة واحدة
                                     </div>
                                 </div>
                             </div>
@@ -274,7 +274,7 @@
                         <div class="row">
                             <div class="col">
                                 <div class="inputFields">
-                                    <input type="text" name="paymentCircle" class="form-control" placeholder=".............................................................................................................................................................">
+                                    <input type="text" name="purpose_reason" class="form-control" placeholder=".............................................................................................................................................................">
                                     <div class="textData rightTextData" style="min-width: 59%;line-height: 13px;text-align: left;">
                                         محدد الغرض | تحديد مجال الدعم أو اسم البرنامج
                                         <br>
@@ -286,11 +286,10 @@
                             </div>
                             <div class="col-4">
                                 <div class="inputFields">
-                                    <input type="radio" name="paymentCircle" value="No specific purpose">
+                                    <input type="radio" name="purpose_reason" value="No specific purpose">
                                     <div class="textData rightTextData">
                                         غير محدد الغرض
-                                        <br>
-                                        No specific purpose
+                                        <br> No specific purpose
                                     </div>
                                 </div>
                             </div>
@@ -315,8 +314,7 @@
                                 </div>
                             </div>
                             <div class="col rightTextData" style="font-size: 0.8em;">
-                                هـــــــــــل ترغب في نشــــــــــــــر اسمك
-                                وقيمة مساهمتك في مطبوعات الصندوق
+                                هـــــــــــل ترغب في نشــــــــــــــر اسمك وقيمة مساهمتك في مطبوعات الصندوق
                             </div>
                         </div>
 
@@ -327,7 +325,7 @@
                                     Date | التــــــــاريخ
                                 </div>
                             </div>
-                            
+
                             <div class="col rightTextData" style="display: flex;align-items: center">
                                 <input type="text" id="signature" name="signature" class="form-control" placeholder="..............................................................................................................">
                                 <div style="max-width: max-content;min-width: max-content;">
@@ -340,13 +338,11 @@
                             <div class="col">
                                 <div class="backgr col-md-12" style="margin:0;border-radius: 10px;display: flex;font-size: 0.8em;justify-content:space-between;padding: 20px;">
                                     <div class="leftTextData">
-                                        You can transfer your contribution directly<br>
-                                        to KFUPM accounts in The Saudi National Bank
+                                        You can transfer your contribution directly<br> to KFUPM accounts in The Saudi National Bank
                                     </div>
 
                                     <div class="rightTextData">
-                                        إيداع مساهمتك عن طريق الإيداع المباشر<br>
-                                        في حساب صندوق جامعة الملك فهد للبترول والمعادن في البنك الأهلي السعودي
+                                        إيداع مساهمتك عن طريق الإيداع المباشر<br> في حساب صندوق جامعة الملك فهد للبترول والمعادن في البنك الأهلي السعودي
                                     </div>
 
                                 </div>
@@ -362,7 +358,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="col-3 rightTextData" style="display: flex;align-items: center">
                                 <div class="inputFields">
                                     <input type="text" id="bank" name="bank" class="form-control">
@@ -382,7 +378,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="col-3 rightTextData" style="display: flex;align-items: center">
                                 <div class="inputFields">
                                     <input type="text" id="bankName" name="bankName" class="form-control">
@@ -442,14 +438,14 @@
                         </div>
 
                     </div>
-                    
+
                     <!-- <div class="col-md-12">
                         <div class="backgr col-md-12">
                             <span>You can transfer your contribution directly<br>
                             to KFUPM accounts in one of the following banks</span>
                         </div>
                     </div> -->
-                    
+
                 </form>
             </div>
             <div class="col-md-6">
@@ -527,25 +523,24 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script>
         function closeNavBar(path) {
-            if(path=='one'){
+            if (path == 'one') {
                 document.getElementById("navTwo").setAttribute("aria-expanded", "false");
                 document.getElementById("navTwo").classList.add("collapsed");
                 document.getElementById("flush-collapseOnet").classList.remove("show");
 
                 document.getElementById("navThree").setAttribute("aria-expanded", "false");
-                document.getElementById("navThree").classList.add("collapsed"); 
+                document.getElementById("navThree").classList.add("collapsed");
                 document.getElementById("flush-collapseOnetn").classList.remove("show");
-            }
-            else if(path=='two'){
+            } else if (path == 'two') {
                 console.log("two")
                 document.getElementById("navOne").setAttribute("aria-expanded", "false");
                 document.getElementById("navOne").classList.add("collapsed");
                 document.getElementById("flush-collapseOne").classList.remove("show");
 
                 document.getElementById("navThree").setAttribute("aria-expanded", "false");
-                document.getElementById("navThree").classList.add("collapsed"); 
+                document.getElementById("navThree").classList.add("collapsed");
                 document.getElementById("flush-collapseOnetn").classList.remove("show");
-            }else{
+            } else {
                 document.getElementById("navTwo").setAttribute("aria-expanded", "false");
                 document.getElementById("flush-collapseOnet").classList.remove("show");
                 document.getElementById("navTwo").classList.add("collapsed");

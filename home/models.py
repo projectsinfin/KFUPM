@@ -241,3 +241,26 @@ class PatnerPage(models.Model):
     
     def __str__(self):              # __unicode__ on Python 2
         return self.page_title
+    
+class FormData(models.Model):
+    kfupm_id_number = models.CharField(max_length=500)
+    name = models.CharField(max_length=500)
+    city = models.CharField(max_length=500)
+    street = models.CharField(max_length=500)
+    address = models.CharField(max_length=500)
+    e_mail = models.CharField(max_length=500)
+    mobile = models.CharField(max_length=500)
+    bookmark = models.CharField(max_length=500)
+    amount = models.CharField(max_length=500)
+    payment_circle = models.CharField(max_length=500)
+    purpose = models.CharField(max_length=500)
+    publish_name = models.CharField(max_length=500)
+    date = models.CharField(max_length=500)
+    signature = models.CharField(max_length=500)
+    # IBAN_number = models.CharField(max_length=500)
+    # bank = models.CharField(max_length=500)
+    # SA_code = models.CharField(max_length=500)
+    
+    
+    def __str__(self):              # __unicode__ on Python 2
+        return self.kfupm_id_number

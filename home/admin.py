@@ -2,10 +2,10 @@ from django.contrib import admin
 from .models import *
 # Register your models here.
 
-# class home_page_data(admin.ModelAdmin):
-#     list_display=('user','region','query','pubnum','tech_area')
-#     list_filter=('user',)
-#     search_fields=('user','region','query','pubnum','tech_area')
+class form_Data(admin.ModelAdmin):
+    list_display=('kfupm_id_number','name','e_mail','mobile','amount','date')
+    list_filter=('kfupm_id_number',)
+    search_fields=('kfupm_id_number','name','e_mail','mobile','amount','date',)
 
 admin.site.register(HomePage)
 admin.site.register(IntroductionPage)
@@ -23,3 +23,4 @@ admin.site.register(ContactUsPage)
 admin.site.register(ResearchInnovation)
 admin.site.register(FundsNumber)
 admin.site.register(PatnerPage)
+admin.site.register(FormData,form_Data)
