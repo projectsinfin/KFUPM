@@ -68,6 +68,7 @@ class EducationalPage(models.Model):
     Progam_title_2 = models.TextField()
     Progam_title_3 = models.TextField()
     Progam_title_4 = models.TextField()
+    Animation_text = models.TextField()
     
     def __str__(self):              # __unicode__ on Python 2
         return self.page_title
@@ -251,7 +252,7 @@ class FormData(models.Model):
     e_mail = models.CharField(max_length=500)
     mobile = models.CharField(max_length=500)
     bookmark = models.CharField(max_length=500)
-    amount = models.CharField(max_length=500)
+    amount = models.CharField(max_length=500,editable = False)
     payment_circle = models.CharField(max_length=500)
     purpose = models.CharField(max_length=500)
     publish_name = models.CharField(max_length=500)
@@ -264,3 +265,8 @@ class FormData(models.Model):
     
     def __str__(self):              # __unicode__ on Python 2
         return self.kfupm_id_number
+    
+class NewsLetter(models.Model):
+    email_id = models.CharField(max_length=500)
+    def __str__(self):              # __unicode__ on Python 2
+        return self.email_id

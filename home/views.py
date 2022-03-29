@@ -260,9 +260,15 @@ def contact_us(request):
     except:
         return render(request, 'home/contact_us.html', {})
 
-def serve_pdf(request):
-    filepath = os.path.join('static', 'setup.pdf')
-    return FileResponse(open(filepath, 'rb'), content_type='application/pdf')
+def new_letter(request):
+    print(request.GET)
+    # print(emailid)
+    News_Letter = NewsLetter()
+    News_Letter.email_id = request.GET.get('email_id')
+    News_Letter.save()
+    return JsonResponse({"data":'OK'})
+    # filepath = os.path.join('static', 'setup.pdf')
+    # return FileResponse(open(filepath, 'rb'), content_type='application/pdf')
 
 def from_data(request):
     form = (request.POST)
@@ -276,14 +282,23 @@ def from_data(request):
     form_data.address = form.get('address','').upper() 
     form_data.e_mail = form.get('email','').upper() 
     form_data.mobile = form.get('mobileNumber','').upper() 
-    form_data.bookmark = form.get('bookmark','').upper() 
+    if form.get('bookmark'):
+        form_data.bookmark = 'YES'
+    else:
+        form_data.bookmark = 'NO'
     form_data.amount = form.get('count','').upper() 
     form_data.payment_circle = form.get('paymentCircle','').upper() 
     form_data.purpose = form.get('purpose_reason','').upper() 
-    form_data.publish_name = form.get('yesORno','').upper() 
+    if form.get('noSpecificPurpose'):
+        form_data.purpose = form.get('noSpecificPurpose','').upper()
+        
+    form_data.publish_name = 'NO'
+    if form.get('yesORno'):
+        form_data.publish_name = form.get('yesORno','').upper() 
+        
     form_data.date = form.get('date','').upper() 
     form_data.signature = form.get('signature','').upper() 
     form_data.save()
     
     Links = get_link()
-    return render(request, 'home/contribution_form.html', {'Links':Links})
+    return contribution(request)

@@ -520,9 +520,11 @@
     <script>
         const input = document.getElementById('countOtherValID');
         input.addEventListener('input', countOtherVal);
-        function countOtherVal(){
+
+        function countOtherVal() {
             document.getElementById("countOtherRadio").setAttribute("value", document.getElementById('countOtherValID').value);
         }
+
         function closeNavBar(path) {
             if (path == 'one') {
                 document.getElementById("navTwo").setAttribute("aria-expanded", "false");

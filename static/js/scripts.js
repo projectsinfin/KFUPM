@@ -1,4 +1,3 @@
-
 window.addEventListener('DOMContentLoaded', event => {
 
     const sidebarWrapper = document.getElementById('sidebar-wrapper');
@@ -63,12 +62,18 @@ function fadeOut(el) {
     })();
 };
 
-function submitNewsletter(){
+function submitNewsletter() {
     var val = document.getElementById('newsletter').value;
-    var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
-    xmlHttp.send( null );
-    return xmlHttp.responseText;
+    // console.log(val)
+    if (val !== '') {
+        const xhttp = new XMLHttpRequest();
+        xhttp.onload = function() {
+            document.getElementById("newsletter").innerHTML = this.responseText;
+        }
+        xhttp.open("GET", "newletter?email_id=" + val);
+        xhttp.send();
+
+    }
 }
 
 function fadeIn(el, display) {
