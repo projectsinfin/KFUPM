@@ -63,6 +63,14 @@ function fadeOut(el) {
     })();
 };
 
+function submitNewsletter(){
+    var val = document.getElementById('newsletter').value;
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
+    xmlHttp.send( null );
+    return xmlHttp.responseText;
+}
+
 function fadeIn(el, display) {
     el.style.opacity = 0;
     el.style.display = display || "block";

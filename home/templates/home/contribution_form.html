@@ -80,14 +80,14 @@
                             <div class="col">
                                 <div class="inputFields">
                                     <div class="textData leftTextData">KFUPM ID Number</div>
-                                    <input type="text" class="form-control" id="idNumber" name="idNumber" placeholder="........................................">
+                                    <input type="text" class="form-control" id="idNumber" name="idNumber" placeholder="........................................" required>
                                     <div class="textData rightTextData">الجامعي الرقم</div>
                                 </div>
                             </div>
                             <div class="col">
                                 <div class="inputFields">
                                     <div class="textData leftTextData">Name</div>
-                                    <input type="text" class="form-control" id="name" name="name" placeholder="....................................................................................">
+                                    <input type="text" class="form-control" id="name" name="name" placeholder="...................................................................................." required>
                                     <div class="textData rightTextData">الاسم</div>
                                 </div>
                             </div>
@@ -97,21 +97,21 @@
                             <div class="col">
                                 <div class="inputFields">
                                     <div class="textData leftTextData">City</div>
-                                    <input type="city" id="city" name="city" class="form-control" placeholder="........................................">
+                                    <input type="city" id="city" name="city" class="form-control" placeholder="........................................" required>
                                     <div class="textData rightTextData">المدينة</div>
                                 </div>
                             </div>
                             <div class="col">
                                 <div class="inputFields">
                                     <div class="textData leftTextData">Street</div>
-                                    <input type="street" id="street" name="street" class="form-control" placeholder="........................................">
+                                    <input type="street" id="street" name="street" class="form-control" placeholder="........................................" required>
                                     <div class="textData rightTextData">الحي</div>
                                 </div>
                             </div>
                             <div class="col">
                                 <div class="inputFields">
                                     <div class="textData leftTextData">Address</div>
-                                    <input type="address" id="address" name="address" class="form-control" placeholder="........................................">
+                                    <input type="address" id="address" name="address" class="form-control" placeholder="........................................" required>
                                     <div class="textData rightTextData">العنوان</div>
                                 </div>
                             </div>
@@ -121,14 +121,14 @@
                             <div class="col">
                                 <div class="inputFields">
                                     <div class="textData leftTextData">E-mail</div>
-                                    <input type="email" id="email" name="email" class="form-control" placeholder="....................................................................">
+                                    <input type="email" id="email" name="email" class="form-control" placeholder="...................................................................." required>
                                     <div class="textData rightTextData">البريد الإلكتروني</div>
                                 </div>
                             </div>
                             <div class="col">
                                 <div class="inputFields">
                                     <div class="textData leftTextData">Mobile</div>
-                                    <input type="number" id="mobileNumber" name="mobileNumber" class="form-control" placeholder="..........................................................................................................................................................">
+                                    <input type="number" id="mobileNumber" name="mobileNumber" class="form-control" placeholder=".........................................................................................................................................................." required>
                                     <div class="textData rightTextData">الجوال</div>
                                 </div>
                             </div>
@@ -159,7 +159,7 @@
                         <div class="row">
                             <div class="col">
                                 <div class="inputFields">
-                                    <input type="radio" name="count" value="15000">
+                                    <input type="radio" name="count" value="15000" checked>
                                     <div class="textData rightTextData" style="display: flex;">
                                         SR | ريال
                                         <div class="counts">15,000</div>
@@ -221,12 +221,12 @@
                             <div class="col">
                                 <div class="inputFields">
                                     <div>
-                                        <input type="radio" name="count" value="other">
+                                        <input type="radio" id="countOtherRadio" name="count" value="">
                                     </div>
                                     <div style="margin-left:10px;max-width: max-content;min-width: max-content;">
                                         SR | ريال
                                     </div>
-                                    <input type="number" class="form-control" placeholder=".............................................................................................................................................................">
+                                    <input type="number" class="form-control" id="countOtherValID" placeholder=".............................................................................................................................................................">
 
                                     <div class="textData rightTextData" style="display: flex;">
                                         Other | مبلغ آخر
@@ -255,7 +255,7 @@
                             </div>
                             <div class="col">
                                 <div class="inputFields">
-                                    <input type="radio" name="paymentCircle" value="One Time">
+                                    <input type="radio" name="paymentCircle" value="One Time" checked>
                                     <div class="textData rightTextData">
                                         One Time | مرة واحدة
                                     </div>
@@ -286,7 +286,7 @@
                             </div>
                             <div class="col-4">
                                 <div class="inputFields">
-                                    <input type="radio" name="purpose_reason" value="No specific purpose">
+                                    <input type="checkbox" name="noSpecificPurpose" value="No specific purpose">
                                     <div class="textData rightTextData">
                                         غير محدد الغرض
                                         <br> No specific purpose
@@ -320,14 +320,14 @@
 
                         <div class="row">
                             <div class="col leftTextData" style="display: flex;align-items: center;">
-                                <input type="Date" id="date" name="date" class="form-control" placeholder=".................................................................................................................................................">
+                                <input type="Date" id="date" name="date" class="form-control" placeholder="................................................................................................................................................." required>
                                 <div style="max-width: max-content;min-width: max-content;">
                                     Date | التــــــــاريخ
                                 </div>
                             </div>
 
                             <div class="col rightTextData" style="display: flex;align-items: center">
-                                <input type="text" id="signature" name="signature" class="form-control" placeholder="..............................................................................................................">
+                                <input type="text" id="signature" name="signature" class="form-control" placeholder=".............................................................................................................." required>
                                 <div style="max-width: max-content;min-width: max-content;">
                                     Signature | التوقيـــع
                                 </div>
@@ -351,8 +351,7 @@
 
                         <div class="row">
                             <div class="col leftTextData" style="display: flex;align-items: center;">
-                                <div class="inputFields grColorBorder" style="width: 100%;">
-                                    <input type="text" id="ibanNo" name="ibanNo" class="form-control">
+                                <div class="inputFields grColorBorder" style="width: 100%;justify-content: end;">
                                     <div style="max-width: max-content;min-width: max-content;">
                                         IBAN Number | رقم الآيبان
                                     </div>
@@ -360,8 +359,7 @@
                             </div>
 
                             <div class="col-3 rightTextData" style="display: flex;align-items: center">
-                                <div class="inputFields">
-                                    <input type="text" id="bank" name="bank" class="form-control">
+                                <div class="inputFields" style="justify-content: end">
                                     <div style="max-width: max-content;min-width: max-content;">
                                         Bank | البنك
                                     </div>
@@ -371,8 +369,7 @@
 
                         <div class="row">
                             <div class="col leftTextData" style="display: flex;align-items: center;">
-                                <div class="inputFields grColorBorder" style="width: 100%;">
-                                    <input type="text" id="bankNo" name="bankNo" class="form-control">
+                                <div class="inputFields grColorBorder" style="width: 100%;justify-content: end">
                                     <div style="max-width: max-content;min-width: max-content;">
                                         SA61-1000-0016-8491-4900-0102
                                     </div>
@@ -380,8 +377,7 @@
                             </div>
 
                             <div class="col-3 rightTextData" style="display: flex;align-items: center">
-                                <div class="inputFields">
-                                    <input type="text" id="bankName" name="bankName" class="form-control">
+                                <div class="inputFields" style="justify-content: end">
                                     <div style="max-width: max-content;min-width: max-content;font-size: 0.8em;">
                                         البنــك الأهلي السعــــودي
                                         <br>The Saudi National Bank
@@ -486,8 +482,8 @@
                     <div class="newsll">
                         <label>Join Our Newsletter</label>
                         <div class="newsletterFlex">
-                            <input type="text" name="newsletter" id="newsletter" value="" placeholder="Email address">
-                            <i class="fa fa-envelope-o"></i>
+                            <input type="email" name="newsletter" id="newsletter" value="" placeholder="Email address">
+                            <i style="cursor: pointer;" onclick="submitNewsletter()" class="fa fa-envelope-o"></i>
                         </div>
                     </div>
                 </div>
@@ -522,6 +518,11 @@
     <script src="{% static 'js/scripts.js' %}"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script>
+        const input = document.getElementById('countOtherValID');
+        input.addEventListener('input', countOtherVal);
+        function countOtherVal(){
+            document.getElementById("countOtherRadio").setAttribute("value", document.getElementById('countOtherValID').value);
+        }
         function closeNavBar(path) {
             if (path == 'one') {
                 document.getElementById("navTwo").setAttribute("aria-expanded", "false");
