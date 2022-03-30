@@ -130,6 +130,7 @@ def educational(request):
         del content_data._state
         Links = get_link()
         content_data.page_content = [i.strip() for i in content_data.page_content.split('\n') if i.strip() != '']
+        content_data.Animation_text = [i.strip() for i in content_data.Animation_text.split('\n') if i.strip() != '']
         content_data.__dict__['Links']=Links
         return render(request, 'home/educational.html', content_data.__dict__)
     except:

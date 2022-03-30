@@ -78,13 +78,13 @@
                 <div class="col-md-6 edutext ">
                     <a href="{% url 'undergraduate' %}"><img src="{% static 'g1.png' %}">
                         <span>{{Progam_title_1}}</span>
-                        <div class="subtextOnHover">{{Animation_text}}</div>
+                        <div class="subtextOnHover">{% for i in Animation_text %} {{i}} {% if not forloop.last %} <br><br>{% endif %} {% endfor %}</div>
                     </a>
                 </div>
                 <div class="col-md-6 edutext ">
                     <a href="{% url 'faculty' %}"><img src="{% static 'g2.png' %}">
                         <span>{{Progam_title_2}}</span>
-                        <div class="subtextOnHover">{{Animation_text}}</div>
+                        <div class="subtextOnHover">{% for i in Animation_text %} {{i}} {% if not forloop.last %} <br><br>{% endif %} {% endfor %}</div>
                     </a>
                 </div>
             </div>
@@ -92,13 +92,13 @@
                 <div class="col-md-6 edutext ">
                     <a href="{% url 'summertraning' %}"> <img src="{% static 'g3.png' %}">
                         <span>{{Progam_title_3}}</span>
-                        <div class="subtextOnHover">{{Animation_text}}</div>
+                        <div class="subtextOnHover">{% for i in Animation_text %} {{i}} {% if not forloop.last %} <br><br>{% endif %} {% endfor %}</div>
                     </a>
                 </div>
                 <div class="col-md-6 edutext ">
                     <a href="{% url 'graduate' %}"> <img src="{% static 'g4.png' %}">
                         <span>{{Progam_title_4}}</span>
-                        <div class="subtextOnHover">{{Animation_text}}</div>
+                        <div class="subtextOnHover">{% for i in Animation_text %} {{i}} {% if not forloop.last %} <br><br>{% endif %} {% endfor %}</div>
                     </a>
                 </div>
             </div>
@@ -178,25 +178,24 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script>
         function closeNavBar(path) {
-            if(path=='one'){
+            if (path == 'one') {
                 document.getElementById("navTwo").setAttribute("aria-expanded", "false");
                 document.getElementById("navTwo").classList.add("collapsed");
                 document.getElementById("flush-collapseOnet").classList.remove("show");
 
                 document.getElementById("navThree").setAttribute("aria-expanded", "false");
-                document.getElementById("navThree").classList.add("collapsed"); 
+                document.getElementById("navThree").classList.add("collapsed");
                 document.getElementById("flush-collapseOnetn").classList.remove("show");
-            }
-            else if(path=='two'){
+            } else if (path == 'two') {
                 console.log("two")
                 document.getElementById("navOne").setAttribute("aria-expanded", "false");
                 document.getElementById("navOne").classList.add("collapsed");
                 document.getElementById("flush-collapseOne").classList.remove("show");
 
                 document.getElementById("navThree").setAttribute("aria-expanded", "false");
-                document.getElementById("navThree").classList.add("collapsed"); 
+                document.getElementById("navThree").classList.add("collapsed");
                 document.getElementById("flush-collapseOnetn").classList.remove("show");
-            }else{
+            } else {
                 document.getElementById("navTwo").setAttribute("aria-expanded", "false");
                 document.getElementById("flush-collapseOnet").classList.remove("show");
                 document.getElementById("navTwo").classList.add("collapsed");
