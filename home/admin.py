@@ -4,6 +4,7 @@ from .models import *
 
 class form_Data(admin.ModelAdmin):
     list_display=('kfupm_id_number','name','e_mail','mobile','amount','date')
+    readonly_fields = ["amount"]
     list_filter=('kfupm_id_number',)
     search_fields=('kfupm_id_number','name','e_mail','mobile','amount','date',)
 
