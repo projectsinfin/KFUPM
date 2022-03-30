@@ -74,7 +74,64 @@
                     </p>
                 </div>
             </div>
-            <div class="row  marg-b">
+
+            <div class="row content">
+				<div class="grid">
+					<figure class="effect-lily">
+						<img src="{% static 'g1.png' %}" alt="img12"/>
+						<figcaption>
+							<div>
+								<h2><span>{{Progam_title_1}}</span></h2>
+								<p>{% for i in Animation_text %} {{i}} {% if not forloop.last %} <br><br>{% endif %} {% endfor %}</p>
+							</div>
+							<a href="{% url 'undergraduate' %}"></a>
+						</figcaption>			
+					</figure>
+					<figure class="effect-lily">
+						<img src="{% static 'g2.png' %}" alt="img1"/>
+						<figcaption>
+							<div>
+								<h2><span>{{Progam_title_2}}</span></h2>
+								<p>{% for i in Animation_text %} {{i}} {% if not forloop.last %} <br><br>{% endif %} {% endfor %}</p>
+							</div>
+							<a href="{% url 'faculty' %}"></a>
+						</figcaption>			
+					</figure>
+				</div>
+				</div>
+
+
+                <div class="row content" style="margin-top: 35px;">
+                    <div class="grid">
+                        <figure class="effect-lily">
+                            <img src="{% static 'g3.png' %}" alt="img12"/>
+                            <figcaption>
+                                <div>
+                                    <h2><span>{{Progam_title_3}}</span></h2>
+                                    <p>{% for i in Animation_text %} {{i}} {% if not forloop.last %} <br><br>{% endif %} {% endfor %}</p>
+                                </div>
+                                <a href="{% url 'summertraning' %}"></a>
+                            </figcaption>			
+                        </figure>
+                        <figure class="effect-lily">
+                            <img src="{% static 'g4.png' %}" alt="img1"/>
+                            <figcaption>
+                                <div>
+                                    <h2><span>{{Progam_title_4}}</span></h2>
+                                    <p>{% for i in Animation_text %} {{i}} {% if not forloop.last %} <br><br>{% endif %} {% endfor %}</p>
+                                </div>
+                                <a href="{% url 'graduate' %}"></a>
+                            </figcaption>			
+                        </figure>
+                    </div>
+                    </div>
+                </div>
+			</div>
+
+            
+
+
+            <!-- <div class="row  marg-b">
                 <div class="col-md-6 edutext ">
                     <a href="{% url 'undergraduate' %}"><img src="{% static 'g1.png' %}">
                         <span>{{Progam_title_1}}</span>
@@ -101,7 +158,7 @@
                         <div class="subtextOnHover">{% for i in Animation_text %} {{i}} {% if not forloop.last %} <br><br>{% endif %} {% endfor %}</div>
                     </a>
                 </div>
-            </div>
+            </div> -->
         </div>
     </section>
 
