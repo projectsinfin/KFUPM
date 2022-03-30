@@ -82,7 +82,8 @@
 						<figcaption>
 							<div>
 								<h2><span>{{Progam_title_1}}</span></h2>
-								<p>{% for i in Animation_text %} {{i}} {% if not forloop.last %} <br><br>{% endif %} {% endfor %}</p>
+								<p>{% for i in Animation_text %} {{i}} {% if not forloop.last %} <br>
+                                    <b>{% endif %} {% endfor %}</b></p>
 							</div>
 							<a href="{% url 'undergraduate' %}"></a>
 						</figcaption>			
@@ -92,7 +93,8 @@
 						<figcaption>
 							<div>
 								<h2><span>{{Progam_title_2}}</span></h2>
-								<p>{% for i in Animation_text %} {{i}} {% if not forloop.last %} <br><br>{% endif %} {% endfor %}</p>
+								<p>{% for i in Animation_text %} {{i}} {% if not forloop.last %} <br>
+                                    <b>{% endif %} {% endfor %}</b></p>
 							</div>
 							<a href="{% url 'faculty' %}"></a>
 						</figcaption>			
@@ -108,7 +110,8 @@
                             <figcaption>
                                 <div>
                                     <h2><span>{{Progam_title_3}}</span></h2>
-                                    <p>{% for i in Animation_text %} {{i}} {% if not forloop.last %} <br><br>{% endif %} {% endfor %}</p>
+                                    <p>{% for i in Animation_text %} {{i}} {% if not forloop.last %} <br>
+                                        <b>{% endif %} {% endfor %}</b></p>
                                 </div>
                                 <a href="{% url 'summertraning' %}"></a>
                             </figcaption>			
@@ -118,7 +121,8 @@
                             <figcaption>
                                 <div>
                                     <h2><span>{{Progam_title_4}}</span></h2>
-                                    <p>{% for i in Animation_text %} {{i}} {% if not forloop.last %} <br><br>{% endif %} {% endfor %}</p>
+                                    <p>{% for i in Animation_text %} {{i}} {% if not forloop.last %} <br>
+                                        <b>{% endif %} {% endfor %}</b></p>
                                 </div>
                                 <a href="{% url 'graduate' %}"></a>
                             </figcaption>			

@@ -11996,7 +11996,8 @@ button.btn.btn-link.btn-block.text-left.collapsed {
 }
 
 .grid figure h2 {
-	word-spacing: -0.15em;
+    font-size: 1.3em;
+	/* word-spacing: -0.15em; */
 	font-weight: 300;
 }
 
@@ -12032,10 +12033,10 @@ figure.effect-lily figcaption {
 
 figure.effect-lily figcaption > div {
 	position: absolute;
-	bottom: 95px;
+	bottom: 115px;
 	left: 9%;
 	padding: 2em;
-	width: 100%;
+	width: 75%;
 	height: 50%;
 }
 
@@ -12092,6 +12093,19 @@ figure.effect-lily:hover p {
 		margin: 10px auto;
 		width: 100%;
 	}
+    .grid{
+        display: block;
+        font-size: 0.6em;
+    }
+    figure.effect-lily figcaption > div {
+        bottom: 105px;
+        left: 8%;
+    }
+    figure.effect-lily:hover div {
+        bottom: 75px;
+        left: 15%;
+    }
+
 }
 .sidebar-nav li .opentab span {
     text-decoration: none;
