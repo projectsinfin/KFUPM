@@ -78,7 +78,7 @@ function submitNewsletter() {
                 exist.style.display = "block";
                 // swal("Thanks You For Joining!", "", "success")
             } else {
-                swal("Thank You For Joining!", "", "success")
+                swal("THANK YOU FOR JOINING!", "", "success")
                 document.getElementById("newsletter").innerHTML = this.responseText;
             }
 

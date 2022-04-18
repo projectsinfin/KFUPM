@@ -12663,6 +12663,19 @@ footer.footer .social-link.in:hover {
 }
 
 @media screen and (max-width: 900px) {
+    figure.effect-lily:hover img {
+        opacity: 1;
+        filter: inherit !important;
+    }
+    figure.effect-lily:hover p {
+        display: none;
+    }
+    figure.effect-lily:hover img,
+    figure.effect-lily:hover h2,
+    figure.effect-lily:hover p {
+        -webkit-transform: unset;
+        transform: translate3d(-22px, 0, 0);
+    }
     .parternsList p {
         width: 100%;
         display: contents;
