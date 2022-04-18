@@ -659,7 +659,7 @@ progress {
 }
 
 .blockquote-footer::before {
-    content: "— ";
+    content: "— ";
 }
 
 .img-fluid {
@@ -12654,12 +12654,16 @@ footer.footer .social-link.in:hover {
 }
 
 @media screen and (max-width: 900px) {
+	.parternsList p {
+    width: 100%;
+    display: contents;
+}
     .box {
         display: flex !important;
         flex-direction: column-reverse !important;
     }
     .menu-toggle {
-        left: 20px;
+        left: 10px;
         top: 25px;
     }
     .container.topdics {
@@ -12668,9 +12672,10 @@ footer.footer .social-link.in:hover {
         display: inline-block;
         height: 100px;
     }
+	
     .logo {
         top: 20px;
-        right: 0;
+        right: 10px;
     }
     .active ul.sidebar-nav {
         left: 0;
@@ -12680,6 +12685,7 @@ footer.footer .social-link.in:hover {
         height: auto;
         background: #ffffffe8;
         padding: 75px 20px;
+		opacity: 1;
     }
     .batboo p {
         width: 100%;
@@ -12735,17 +12741,17 @@ footer.footer .social-link.in:hover {
         overflow-x: hidden;
     }
     .slidstud {
-        padding: 50px;
-        background-size: contain;
+        padding: 30px 50px;
+        background-size: contain !important;
     }
     .slidstud h3 {
         width: 100%;
-        margin: 0 auto;
-        font-size: 14px;
+        margin: 0 38%;
+        font-size: 11px;
         margin-top: 15px;
         margin-bottom: 70px;
         font-weight: 500;
-        line-height: 19px;
+        line-height: 15px;
     }
     header.innerpag.stp.occ {
         background-size: cover;
@@ -12800,7 +12806,7 @@ footer.footer .social-link.in:hover {
         padding: 40px;
         text-align: center;
         background-size: contain;
-        margin-top: 10px;
+        margin-top: -50px;
         border-top-left-radius: 90px;
         border-bottom-right-radius: 90px;
     }
@@ -12815,9 +12821,10 @@ footer.footer .social-link.in:hover {
     }
     .boxdiv {
         background-position: top left;
+		background-size: 320px;
     }
     .vison_misson .col-md-6.batboor {
-        padding-top: 500px;
+        padding-top: 360px;
     }
     .vison_misson .boxdiv {
         height: auto;
