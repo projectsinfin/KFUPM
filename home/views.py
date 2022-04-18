@@ -265,6 +265,9 @@ def new_letter(request):
     print(request.GET)
     # print(emailid)
     News_Letter = NewsLetter()
+    if NewsLetter.objects.filter(email_id=request.GET.get('email_id')).exists():
+        return JsonResponse({"data":'allready Exist'})
+    
     News_Letter.email_id = request.GET.get('email_id')
     News_Letter.save()
     return JsonResponse({"data":'OK'})

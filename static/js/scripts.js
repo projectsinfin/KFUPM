@@ -65,17 +65,28 @@ function fadeOut(el) {
 function submitNewsletter() {
     var val = document.getElementById('newsletter').value;
     var invalidEmail = document.querySelector(".invalidEmail");
+    var exist = document.querySelector(".exist");
     // console.log(val)
     var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     if (val !== '' && val.match(mailformat)) {
         invalidEmail.style.display = "none";
+        exist.style.display = "none";
         const xhttp = new XMLHttpRequest();
         xhttp.onload = function() {
-            document.getElementById("newsletter").innerHTML = this.responseText;
+            console.log(JSON.parse(this.responseText)['data']);
+            if (JSON.parse(this.responseText)['data'] !== 'OK') {
+                exist.style.display = "block";
+                // swal("Thanks You For Joining!", "", "success")
+            } else {
+                swal("Thank You For Joining!", "", "success")
+                document.getElementById("newsletter").innerHTML = this.responseText;
+            }
+
         }
         xhttp.open("GET", "newletter?email_id=" + val);
         xhttp.send();
-    }else{
+    } else {
+        exist.style.display = "none";
         invalidEmail.style.display = "block"
     }
 }

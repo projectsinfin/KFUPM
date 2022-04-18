@@ -12235,6 +12235,15 @@ a.collapsed.opentab .bb {
     margin-top: -7px;
 }
 
+.exist {
+    color: red;
+    font-weight: 400;
+    display: none;
+    position: absolute;
+    font-size: 0.7em;
+    margin-top: -7px;
+}
+
 .edutext {
     position: relative;
     text-align: center;
@@ -12654,10 +12663,10 @@ footer.footer .social-link.in:hover {
 }
 
 @media screen and (max-width: 900px) {
-	.parternsList p {
-    width: 100%;
-    display: contents;
-}
+    .parternsList p {
+        width: 100%;
+        display: contents;
+    }
     .box {
         display: flex !important;
         flex-direction: column-reverse !important;
@@ -12672,7 +12681,6 @@ footer.footer .social-link.in:hover {
         display: inline-block;
         height: 100px;
     }
-	
     .logo {
         top: 20px;
         right: 10px;
@@ -12685,7 +12693,7 @@ footer.footer .social-link.in:hover {
         height: auto;
         background: #ffffffe8;
         padding: 75px 20px;
-		opacity: 1;
+        opacity: 1;
     }
     .batboo p {
         width: 100%;
@@ -12821,7 +12829,7 @@ footer.footer .social-link.in:hover {
     }
     .boxdiv {
         background-position: top left;
-		background-size: 320px;
+        background-size: 320px;
     }
     .vison_misson .col-md-6.batboor {
         padding-top: 360px;
