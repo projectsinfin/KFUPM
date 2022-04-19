@@ -11968,6 +11968,9 @@ button.btn.btn-link.btn-block.text-left.collapsed {
 }
 
 @media screen and (max-width: 25em) {
+    section#about .grid {
+        margin-bottom: -27px;
+    }
     .codrops-header {
         font-size: 75%;
     }
@@ -12073,8 +12076,8 @@ figure.effect-lily img {
     opacity: 1;
     -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
     transition: opacity 0.35s, transform 0.35s;
-    -webkit-transform: translate3d(-40px, 0, 0);
-    transform: translate3d(-40px, 0, 0);
+    /* -webkit-transform: translate3d(-40px, 0, 0); */
+    transform: translate3d(-4px, 0, 0);
 }
 
 figure.effect-lily figcaption {
@@ -12148,11 +12151,12 @@ figure.effect-lily:hover p {
         font-size: 0.6em;
     }
     figure.effect-lily figcaption>div {
-        bottom: 105px;
-        left: 8%;
+        bottom: 80px;
+        left: 13%;
+        text-align: center;
     }
     figure.effect-lily:hover div {
-        bottom: 75px;
+        bottom: 32px;
         left: 15%;
     }
 }
@@ -12674,7 +12678,7 @@ footer.footer .social-link.in:hover {
     figure.effect-lily:hover h2,
     figure.effect-lily:hover p {
         -webkit-transform: unset;
-        transform: translate3d(-22px, 0, 0);
+        transform: translate3d(-4px, 0, 0);
     }
     .parternsList p {
         width: 100%;
