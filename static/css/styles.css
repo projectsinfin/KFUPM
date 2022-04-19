@@ -11647,6 +11647,7 @@ footer.footer .social-link {
     height: auto;
     background: #ffffffe8;
     padding: 75px 35px;
+    opacity: 1;
 }
 
 .parternsList {
@@ -12133,6 +12134,9 @@ figure.effect-lily:hover p {
 }
 
 @media screen and (max-width: 50em) {
+    section#about {
+        margin-bottom: 3rem;
+    }
     section#about .grid {
         margin-bottom: -27px;
     }
