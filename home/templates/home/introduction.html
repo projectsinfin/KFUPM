@@ -15,9 +15,23 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
 </head>
 
 <body id="page-top">
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="poop-up">
+                <div class="logo">
+                    <img src="{% static 'logo.png' %}" alt="">
+                </div>
+                <div class="poopup-text">
+                    <h3>thanks you for joining!</h3>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Navigation-->
     <div class="container topdics innerhead">
         <a class="menu-toggle rounded" href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
@@ -167,6 +181,26 @@
     </script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
         function closeNavBar(path) {
             if (path == 'one') {
                 document.getElementById("navTwo").setAttribute("aria-expanded", "false");

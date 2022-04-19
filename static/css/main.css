@@ -1,58 +1,72 @@
 /*here is the css of poop-up*/
+
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
 }
-  
 
 .modal-content {
-      background-color: #fffbfb;
-      margin: auto;
-      width: 248px;
-      border-radius: 40px;
+    background-color: #fffbfb;
+    margin: auto;
+    width: 248px;
+    border-radius: 12px;
 }
-  
- 
+
 .close {
-    color: #4ec293;
-    font-size: 28px;
-    font-weight: bold;
+    color: white;
+    height: 25px;
+    width: 25px;
+    font-size: 24px;
+    font-weight: 400;
     float: right;
     position: relative;
-    right: 15px;
+    text-align: right;
+    margin: 4px 0px 0px 214px;
+    border-radius: 50%;
+    background: -webkit-linear-gradient(0deg, #007e4b, #007fe3);
+    -webkit-text-fill-color: transparent;
+    text-decoration: none;
+    padding: 1px 4px;
 }
 
 .close:hover,
 .close:focus {
-    color: #000;
+    /* color: #000; */
     text-decoration: none;
     cursor: pointer;
 }
 
 .poop-up {
     padding: 25px 0px;
-    background: white ;
+    background: white;
     max-width: 250px;
     margin: auto;
     border-radius: 33px;
 }
-    
+
 .logo {
-    max-width: 73%;
+    max-width: fit-content;
     margin: auto;
 }
-    
+
 .logo img {
     max-width: 100%;
 }
-  
+
 .poopup-text {
     padding-top: 18px;
     text-transform: uppercase;
@@ -63,11 +77,13 @@
     max-width: 216px;
     margin: auto;
 }
-.poopup-text h1 {
-      margin: 0px;
-      background: -webkit-linear-gradient(0deg, #007e4b, #007fe3);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+
+.poopup-text h3 {
+    margin: 0px;
+    font-weight: 1000;
+    background: -webkit-linear-gradient(0deg, #007e4b, #007fe3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 button#myBtn {
@@ -77,6 +93,3 @@ button#myBtn {
     bottom: 53px;
     border: none;
 }
-
-
-

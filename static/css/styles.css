@@ -12589,6 +12589,15 @@ footer.footer .social-link.in:hover {
     text-decoration: none;
 }
 
+.poop-up .logo {
+    position: static;
+}
+
+.modal-content {
+    background-color: #fff;
+    width: 280px;
+}
+
 @media (min-width: 767px) and (max-width: 1180px) {
     .vison_misson .boxdiv {
         background-position: top left;
