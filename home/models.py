@@ -9,7 +9,7 @@ class Link(models.Model):
     linkedin_url = models.URLField(blank = True)
     instagram_url = models.URLField(blank = True)
     youTube_url = models.URLField(blank = True)
-    youTube_video_url = models.URLField(blank = True)
+    youTube_video_code = models.CharField(max_length=200,blank = True)
     alumni_portal = models.URLField(blank = True)
     KFUPM_News = models.URLField(blank = True)
     brochure_pdf = models.FileField(blank = True,upload_to='static/')

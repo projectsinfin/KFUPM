@@ -1,0 +1,82 @@
+/*here is the css of poop-up*/
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+}
+  
+
+.modal-content {
+      background-color: #fffbfb;
+      margin: auto;
+      width: 248px;
+      border-radius: 40px;
+}
+  
+ 
+.close {
+    color: #4ec293;
+    font-size: 28px;
+    font-weight: bold;
+    float: right;
+    position: relative;
+    right: 15px;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.poop-up {
+    padding: 25px 0px;
+    background: white ;
+    max-width: 250px;
+    margin: auto;
+    border-radius: 33px;
+}
+    
+.logo {
+    max-width: 73%;
+    margin: auto;
+}
+    
+.logo img {
+    max-width: 100%;
+}
+  
+.poopup-text {
+    padding-top: 18px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bolder;
+    font-family: auto;
+    text-align: center;
+    max-width: 216px;
+    margin: auto;
+}
+.poopup-text h1 {
+      margin: 0px;
+      background: -webkit-linear-gradient(0deg, #007e4b, #007fe3);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+}
+
+button#myBtn {
+    position: absolute;
+    background: #242424;
+    right: 38px;
+    bottom: 53px;
+    border: none;
+}
+
+
+

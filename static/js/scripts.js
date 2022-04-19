@@ -66,11 +66,20 @@ function submitNewsletter() {
     var val = document.getElementById('newsletter').value;
     var invalidEmail = document.querySelector(".invalidEmail");
     var exist = document.querySelector(".exist");
+    // Get the modal
+    var modal = document.getElementById("myModal");
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+
+    // // Get the <span> element that closes the modal
+    // var span = document.getElementsByClassName("close")[0];
     // console.log(val)
     var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     if (val !== '' && val.match(mailformat)) {
         invalidEmail.style.display = "none";
         exist.style.display = "none";
+        modal.style.display = "none";
         const xhttp = new XMLHttpRequest();
         xhttp.onload = function() {
             console.log(JSON.parse(this.responseText)['data']);
@@ -78,7 +87,10 @@ function submitNewsletter() {
                 exist.style.display = "block";
                 // swal("Thanks You For Joining!", "", "success")
             } else {
-                swal("THANK YOU FOR JOINING!", "", "success")
+                // btn.onclick = function() {
+                modal.style.display = "block";
+                // }
+                // swal("THANK YOU FOR JOINING!", "", "success")
                 document.getElementById("newsletter").innerHTML = this.responseText;
             }
 
@@ -88,6 +100,7 @@ function submitNewsletter() {
     } else {
         exist.style.display = "none";
         invalidEmail.style.display = "block"
+        modal.style.display = "none";
     }
 }
 
