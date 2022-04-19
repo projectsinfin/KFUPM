@@ -11968,9 +11968,6 @@ button.btn.btn-link.btn-block.text-left.collapsed {
 }
 
 @media screen and (max-width: 25em) {
-    section#about .grid {
-        margin-bottom: -27px;
-    }
     .codrops-header {
         font-size: 75%;
     }
@@ -12136,6 +12133,9 @@ figure.effect-lily:hover p {
 }
 
 @media screen and (max-width: 50em) {
+    section#about .grid {
+        margin-bottom: -27px;
+    }
     .content {
         padding: 0 10px;
         text-align: center;
